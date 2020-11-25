@@ -1,6 +1,7 @@
 <template>
   <div class="splash">
-    <p>Twan</p>
+    <h1>Twan</h1>
+    <h2>04-11-2020</h2>
   </div>
 </template>
 
@@ -16,7 +17,13 @@ export default {
 <style scoped>
 .splash {
   background: #4ea888;
+  display: grid;
+  place-items: center;
   height: 100vh;
   margin: 0;
+}
+
+h1, h2 {
+  color: #DCBF85;
 }
 </style>

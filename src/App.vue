@@ -5,13 +5,11 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
 import Splash from './components/Splash.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Splash
   }
 }
