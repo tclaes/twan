@@ -32,6 +32,8 @@ export default {
 	h1 {
 		color: #DCBF85;
     font-family: "Little Dinosaur";
+    font-weight: 700;
+    font-size: 72px;
 	}
 
 	h2 {

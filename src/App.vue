@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
-    <Splash></Splash>
-  </div>
+	<div id="app">
+		<Splash></Splash>
+	</div>
 </template>
 
 <script>
-import Splash from './components/Splash.vue';
+	import Splash from './components/Splash.vue';
 
 export default {
   name: 'App',
@@ -16,22 +16,31 @@ export default {
 </script>
 
 <style>
-@font-face {
-   font-family: 'Little Dinosaur';
-      src: url('./assets/fonts/LittleDinosaur.otf');
-   font-weight: 400;
-   font-style: normal;
-}
-body {
-  margin: 0;
-  padding: 0;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin: 0;
-}
+	@font-face {
+		font-family: 'Little Dinosaur';
+		src: url('./assets/fonts/LittleDinosaur.otf');
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'Little Dinosaur';
+		src: url('./assets/fonts/LittleDinosaur-Bold.otf');
+		font-weight: 700;
+		font-style: normal;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	#app {
+		font-family: Avenir, Helvetica, Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-align: center;
+		color: #2c3e50;
+		margin: 0;
+	}
 </style>
