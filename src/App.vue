@@ -16,6 +16,12 @@ export default {
 </script>
 
 <style>
+@font-face {
+   font-family: 'Little Dinosaur';
+      src: url('./assets/fonts/LittleDinosaur.otf');
+   font-weight: 400;
+   font-style: normal;
+}
 body {
   margin: 0;
   padding: 0;
