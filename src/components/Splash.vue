@@ -23,7 +23,11 @@ export default {
   margin: 0;
 }
 
-h1, h2 {
+h1 {
   color: #DCBF85;
+}
+
+h2 {
+  color: white;
 }
 </style>
