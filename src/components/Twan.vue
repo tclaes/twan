@@ -1,7 +1,7 @@
 <template>
 	<div id="twan">
-		<h1>Twan</h1>
-    <h2>04-11-2020</h2>
+		<h1 class="uppercase">Twan</h1>
+    <h2 class="uppercase">04 November 2020</h2>
 	</div>
 </template>
 
@@ -23,6 +23,8 @@
 	h2 {
 		color: white;
     font-family: "Little Dinosaur";
-    margin: 0;
+		margin: 0;
+		font-size: 60px;
+		font-weight: normal;
 	}
 </style>
