@@ -1,18 +1,19 @@
 <template>
 	<div class="splash">
-		<Dinosaur></Dinosaur>
-		<h1>Twan</h1>
-		<h2>04-11-2020</h2>
+		<Dinosaur />
+		<Twan />
 	</div>
 </template>
 
 <script>
 	import Dinosaur from './Dinosaur.vue';
+	import Twan from './Twan.vue';
 
 export default {
   name: "Splash",
   components: {
-    Dinosaur
+		Dinosaur,
+		Twan
   },
   props: {
     msg: String
@@ -27,17 +28,5 @@ export default {
 		place-items: center;
 		height: 100vh;
 		margin: 0;
-	}
-
-	h1 {
-		color: #DCBF85;
-    font-family: "Little Dinosaur";
-    font-weight: 700;
-    font-size: 72px;
-	}
-
-	h2 {
-		color: white;
-    font-family: "Little Dinosaur";
 	}
 </style>
