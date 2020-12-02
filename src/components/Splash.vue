@@ -33,8 +33,8 @@ export default {
 		display: grid;
 		grid-template-rows: 1fr 2fr 100px;
 		place-items: center;
-		height: 100vh;
-		height: calc(var(--vh, 1vh) * 100);
+		min-height: 100vh;
+		min-height: -webkit-fill-available;
 		margin: 0 0 2rem;
 	}
 
