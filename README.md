@@ -1,3 +1,3 @@
 # twan
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/twan)
+Onze zoon werd geboren en heeft zijn eigen website, waar al een heel verhaal geschreven is.
