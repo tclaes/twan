@@ -1,6 +1,6 @@
 <template>
 	<div id="twan-storie">
-		<h1 class="uppercase">Twan's (korte) verhaal</h1>
+		<h1 class="uppercase">Twan's verhaal in het kort</h1>
     <h2>Dag 0</h2>
       <p>Op 4 november ben ik geboren, via een keizersnede want er zouden complicaties kunnen zijn met mijn mama en dat willen 
         we zeker niet. Mijn hartslag bleef wat hoog tijdens de bevalling dus de keuze voor die keizersnede was snel gemaakt.</p>
