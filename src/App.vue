@@ -1,16 +1,19 @@
 <template>
 	<div id="app">
-		<Splash></Splash>
+		<Splash />
+		<TwansStorie />
 	</div>
 </template>
 
 <script>
 	import Splash from './components/Splash.vue';
+	import TwansStorie from './components/TwansStorie'
 
 export default {
   name: 'App',
   components: {
-    Splash
+		Splash,
+		TwansStorie
   }
 }
 </script>
@@ -39,8 +42,8 @@ export default {
 		font-family: Avenir, Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
 		color: #2c3e50;
 		margin: 0;
 	}
+
 </style>
