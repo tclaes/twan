@@ -36,7 +36,6 @@ export default {
   #chevron-down {
     height: 3rem;
     width: 3rem;
-    margin-bottom: 3rem;
 
     &:hover {
       cursor: pointer;
