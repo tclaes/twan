@@ -7,15 +7,15 @@
 
 <script>
 	import Splash from './components/Splash.vue';
-	import TwansStorie from './components/TwansStorie'
-
-export default {
-  name: 'App',
-  components: {
-		Splash,
-		TwansStorie
-  }
-}
+	import TwansStorie from './components/TwansStorie';
+	
+	export default {
+		name: 'App',
+		components: {
+			Splash,
+			TwansStorie
+		}
+	}
 </script>
 
 <style>
