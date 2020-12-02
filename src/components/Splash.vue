@@ -17,7 +17,11 @@ export default {
 		Dinosaur,
 		Twan,
 		Down
-  }
+	},
+	mounted: function(){
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	}
 };
 </script>
 
@@ -28,6 +32,7 @@ export default {
 		grid-template-rows: 1fr 2fr 100px;
 		place-items: center;
 		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
 		margin: 0 0 2rem;
 	}
 
