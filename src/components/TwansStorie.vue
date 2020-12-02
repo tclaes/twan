@@ -22,10 +22,13 @@
         als mogelijk ook naar Leuven gekomen. 
       </p>
       <p>Toen ze aankwamen waren er al wat onderzoeken gebeurd. Mijn rechter hartkamer lijkt vergroot te zijn. Dit kan een gevolg zijn 
-        van de malformatie, maar wat is dat nu juist? Daarover kan je hier meer lezen: <a href='https://www.hersenstichting.nl/hersenaandoeningen/arterioveneuze-malformatie/'>AVM</a>
+        van de malformatie, maar wat is dat nu juist? Daarover kan je hier meer lezen: 
+        <a href='https://www.hersenstichting.nl/hersenaandoeningen/arterioveneuze-malformatie/'>AVM</a>
       </p>
-      <p>De Dokters in Leuven kunnen me zelf niet verder helpen dus hebben ze een zeer bekwame Dokter van het Erasme ziekenhuis in Brussell
-        gecontacteerd. Er volgens nog wat onderzoeken in Leuven (echo's, MRI) maar dan wordt ik alweer opgehaald met een ambulance. Deze keer
+      <p>De Dokters in Leuven kunnen me zelf niet verder helpen dus hebben ze een zeer bekwame Dokter (
+          <a href="https://www.erasme.ulb.ac.be/fr/a-propos-de-l-hopital/annuaire-du-personnel/lubicz-boris">Dr. Lubicz</a>
+        ) van het Erasme ziekenhuis in Brussel gecontacteerd. Er volgen nog wat onderzoeken in Leuven (echo's, MRI en zelfs een coronatest) 
+        maar dan wordt ik alweer opgehaald met een ambulance. Deze keer
         gaan we richting Brussel. 
       </p>
       <p>Er is een heel team klaar om naar me te kijken. Oh, daar zijn Mama en Papa toch ook al. Opnieuw een onderzoek, een echo van mijn hart.
