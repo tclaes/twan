@@ -2,21 +2,24 @@
 	<div id="twan-storie">
 		<h1 class="uppercase">Twan's verhaal in het kort</h1>
     <h2>Dag 0</h2>
-      <p>Op 4 november ben ik geboren, via een keizersnede want er zouden complicaties kunnen zijn met mijn mama en dat willen 
-        we zeker niet. Mijn hartslag bleef wat hoog tijdens de bevalling dus de keuze voor die keizersnede was snel gemaakt.</p>
-      <p>Daar was ik dan, een flinke brok baby ( 52cm en 4,510kg). Heb geprobeerd de dokter onder te piesen maar is mislukt, doeme toch.</p>
-      <p>De Dr. friemelt wat aan me en vertelt Papa dat alles in orde lijkt, maar ze hebben wel een kleine cyste gezien dus voor alle 
-        zekerheid doen we morgen een echo.</p>
+      <p>Op 4 november ben ik geboren, via een keizersnede want er zouden complicaties kunnen zijn met mijn Mama en dat willen 
+        we zeker niet. 
+        Mijn hartslag bleef wat hoog tijdens de bevalling dus de keuze voor die keizersnede was snel gemaakt.</p>
+      <p>Daar was ik dan, een flinke brok baby ( 52cm en 4,510kg). Heb geprobeerd de Dokter onder te piesen maar dat is mislukt,
+        hij sprong net op tijd weg, doeme toch.
+      </p>
+      <p>De Dr. friemelt wat aan me en zegt tegen Papa dat alles in orde lijkt, maar ze hebben wel een kleine cyste gezien dus 
+        voor alle zekerheid doen ze morgen een echo.</p>
       <h2>Dag 1</h2>
-      <p>Vandaag krijg ik een echo, Papa gaat met me mee. De radioloog kijkt in mijn hoofd met een gek glibberig ding. Hij ziet iets raar,
-        een soort malformatie die er niet hoort te zijn, zeer zeldzaam maar volgens hem behandelbaar en we hoeven ons er niet direct zorgen
-        om te maken. Papa vertrouwt het niet. 
+      <p>Vandaag krijg ik een echo, Papa gaat met me mee. De radioloog kijkt op mijn hoofd met een gek glibberig ding. 
+        Hij ziet iets raar, een soort malformatie die er niet hoort te zijn, zeer zeldzaam maar volgens hem behandelbaar. 
+        We hoeven ons er niet direct zorgen om te maken. Papa vertrouwt het niet.
       </p>
     <h2>Dag 2</h2>
       <p>2d oud was ik en dan werd plots alles anders. De kinderdokter is nog bij Mama geweest en die vertrouwt het ook niet en heeft
-        naar Leuven gebeld. Die willen me onmiddelijk daar hebben om me te onderzoeken. Oei, Mama kan is nog niet uit bed geweest. Moet
-        ik nu zonder Mama en Papa weg? En ja hoor, ze zijn me heel snel komen ophalen met de ambulance. Mama en Papa kwamen zo snel als mogelijk
-        ook naar Leuven gekomen. 
+        naar Leuven gebeld. Die willen me onmiddelijk daar hebben om me te onderzoeken. Oei, Mama is nog niet uit bed geweest. Moet
+        ik nu zonder Mama en Papa weg? En ja hoor, ze zijn me heel snel komen ophalen met de ambulance. Mama en Papa zijn zo snel 
+        als mogelijk ook naar Leuven gekomen. 
       </p>
       <p>Toen ze aankwamen waren er al wat onderzoeken gebeurd. Mijn rechter hartkamer lijkt vergroot te zijn. Dit kan een gevolg zijn 
         van de malformatie, maar wat is dat nu juist? Daarover kan je hier meer lezen: <a href='https://www.hersenstichting.nl/hersenaandoeningen/arterioveneuze-malformatie/'>AVM</a>
@@ -78,8 +81,8 @@
     <h2>Dag 14</h2>
     <p>Gewoon een rustige dag zonder nieuws, de echo is voor morgen.</p>
     <h2>Dag 15</h2>
-    <p>De grote dag, ik krijg een onderzoek van mijn hart. Die gel ik koud, maar ik blijf toch redelijk rustig. Na lang kijken
-      zegt de kinder radioloog dat alles nu perfect in orde is. Mama en Papa zijn superblij. We kunnen eindelijk naar huis. 
+    <p>De grote dag, ik krijg een onderzoek van mijn hart. Die gel is koud, maar ik blijf toch redelijk rustig. Na lang kijken
+      zegt de kinder radioloog dat alles nu perfect in orde is. Mama en Papa zijn superblij. We kunnen eindelijk naar huis.
     </p>
     <h3>to be continued...</h3>
 	</div>
