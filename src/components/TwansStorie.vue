@@ -8,7 +8,7 @@
       <p>Daar was ik dan, een flinke brok baby ( 52cm en 4,510kg). Heb geprobeerd de Dokter onder te piesen maar dat is mislukt,
         hij sprong net op tijd weg, doeme toch.
       </p>
-      <p>De Dr. friemelt wat aan me en zegt tegen Papa dat alles in orde lijkt, maar ze hebben wel een kleine cyste gezien dus 
+      <p>De Dokter friemelt wat aan me en zegt tegen Papa dat alles in orde lijkt, maar ze hebben wel een kleine cyste gezien dus 
         voor alle zekerheid doen ze morgen een echo.</p>
       <h2>Dag 1</h2>
       <p>Vandaag krijg ik een echo, Papa gaat met me mee. De radioloog kijkt op mijn hoofd met een gek glibberig ding. 
@@ -16,7 +16,7 @@
         We hoeven ons er niet direct zorgen om te maken. Papa vertrouwt het niet.
       </p>
     <h2>Dag 2</h2>
-      <p>2d oud was ik en dan werd plots alles anders. De kinderdokter is nog bij Mama geweest en die vertrouwt het ook niet en heeft
+      <p>2 dagen oud was ik en dan werd plots alles anders. De kinderdokter is nog bij Mama geweest en die vertrouwt het ook niet en heeft
         naar Leuven gebeld. Die willen me onmiddelijk daar hebben om me te onderzoeken. Oei, Mama is nog niet uit bed geweest. Moet
         ik nu zonder Mama en Papa weg? En ja hoor, ze zijn me heel snel komen ophalen met de ambulance. Mama en Papa zijn zo snel 
         als mogelijk ook naar Leuven gekomen. 
@@ -28,7 +28,7 @@
       <p>De Dokters in Leuven kunnen me zelf niet verder helpen dus hebben ze een zeer bekwame Dokter (
           <a href="https://www.erasme.ulb.ac.be/fr/a-propos-de-l-hopital/annuaire-du-personnel/lubicz-boris">Dr. Lubicz</a>
         ) van het Erasme ziekenhuis in Brussel gecontacteerd. Er volgen nog wat onderzoeken in Leuven (echo's, MRI en zelfs een coronatest) 
-        maar dan wordt ik alweer opgehaald met een ambulance. Deze keer
+        maar dan word ik alweer opgehaald met een ambulance. Deze keer
         gaan we richting Brussel. 
       </p>
       <p>Er is een heel team klaar om naar me te kijken. Oh, daar zijn Mama en Papa toch ook al. Opnieuw een onderzoek, een echo van mijn hart.
