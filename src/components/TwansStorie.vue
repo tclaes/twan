@@ -58,8 +58,8 @@
     <h2>Dag 6</h2>
       <p>De cruciale 24u zijn goed verlopen. Het lijkt alsof ik me al wat beter voel, en mijn hartslag is precies al wat gedaald.</p>
     <h2>Dag 7</h2>
-      <p>Oei, nog een probleempje, ik heb wat te veel aansluitingen gemaakt van mijn nieren naar mijn galblaas. Op zich niet problematisch
-        maar er is wat reflux van de galblaas naar de nieren en dat kan ontstekingen veroorzaken, dat is nu het laatste wat we willen.
+      <p>Oei, nog een probleempje, ik heb wat te veel aansluitingen gemaakt van mijn nieren naar mijn blaas. Op zich niet problematisch
+        maar er is wat reflux van de blaas naar de nieren en dat kan ontstekingen veroorzaken, dat is nu het laatste wat we willen.
         Ik moet hiervoor antibiotica nemen uit voorzorg en een besnijdenis wordt aangeraden. Een van de pediaters stelt voor dit (mits mogelijk)
         gelijktijdig met een 2de embolisatie te doen. Voor Mama en Papa is dat ok.
       </p>
