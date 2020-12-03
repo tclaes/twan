@@ -6,7 +6,7 @@
 </template>
 
 <script>
-	import Splash from './components/Splash.vue';
+	import Splash from './pages/Splash.vue';
 	import TwansStorie from './components/TwansStorie';
 	
 	export default {
