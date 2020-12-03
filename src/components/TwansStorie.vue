@@ -5,7 +5,7 @@
       <p>Op 4 november ben ik geboren, via een keizersnede want er zouden complicaties kunnen zijn met mijn Mama en dat willen 
         we zeker niet. 
         Mijn hartslag bleef wat hoog tijdens de bevalling dus de keuze voor die keizersnede was snel gemaakt.</p>
-      <p>Daar was ik dan, een flinke brok baby ( 52cm en 4,510kg). Heb geprobeerd de Dokter onder te piesen maar dat is mislukt,
+      <p>Daar was ik dan, een flinke brok baby (52cm en 4,510kg). Heb geprobeerd de Dokter onder te piesen maar dat is mislukt,
         hij sprong net op tijd weg, doeme toch.
       </p>
       <p>De Dokter friemelt wat aan me en zegt tegen Papa dat alles in orde lijkt, maar ze hebben wel een kleine cyste gezien dus 
