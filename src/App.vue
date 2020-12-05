@@ -1,6 +1,5 @@
 <template>
 	<div id="app">
-		<Post />
 		<Splash />
 		<TwansStorie />
 	</div>
@@ -9,14 +8,12 @@
 <script>
 	import Splash from './pages/Splash.vue';
 	import TwansStorie from './components/TwansStorie';
-	import Post from './components/Post.vue';
 		
 	export default {
 		name: 'App',
 		components: {
 			Splash,
 			TwansStorie,
-			Post
 		}
 	}
 </script>

@@ -1,6 +1,7 @@
 <template>
 	<div id="twan-storie">
 		<h1 class="uppercase">Twan's verhaal in het kort</h1>
+    <Posts />
     <h2>Dag 0</h2>
       <p>Op 4 november ben ik geboren, via een keizersnede want er zouden complicaties kunnen zijn met mijn Mama en dat willen 
         we zeker niet. 
@@ -92,8 +93,12 @@
 </template>
 
 <script>
+  import Posts from './Posts';
 	export default {
-  name: "TwansStorie"
+  name: "TwansStorie",
+  components: {
+    Posts
+  }
 };
 </script>
 
@@ -108,19 +113,12 @@
     padding: 0 3rem;
     margin: 0 auto;
   }
-	h1 {
+
+  h1 {
 		color: #DCBF85;
     font-family: "Little Dinosaur";
     font-weight: 700;
     font-size: 3rem;
     margin: 1rem 0 3rem;
-	}
-
-	h2 {
-		color: #333;
-    font-family: "Little Dinosaur";
-		margin: 0;
-		font-size: 2rem;
-		font-weight: normal;
 	}
 </style>
