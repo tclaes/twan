@@ -1,5 +1,6 @@
 <template>
 	<div id="app">
+		<Post />
 		<Splash />
 		<TwansStorie />
 	</div>
@@ -8,42 +9,14 @@
 <script>
 	import Splash from './pages/Splash.vue';
 	import TwansStorie from './components/TwansStorie';
-	import { PrismicLink } from "apollo-link-prismic";
-	import { InMemoryCache } from "apollo-cache-inmemory";
-	import ApolloClient from "apollo-client";
-	import gql from "graphql-tag";
-
-	const client = new ApolloClient({
-		link: PrismicLink({
-			uri: "https://twanclaes.prismic.io/graphql",
-		}),
-		cache: new InMemoryCache()
-	});
+	import Post from './components/Post.vue';
 		
 	export default {
 		name: 'App',
 		components: {
 			Splash,
-			TwansStorie
-		},
-		mounted: () => {
-			client.query({
-				query: gql`
-					query {
-						allPosts {
-							edges {
-								node {
-									title
-								}
-							}
-						}
-					}
-				`
-			}).then(response => {
-				console.log(response);
-			}).catch(error => {
-				console.error(error);
-			});
+			TwansStorie,
+			Post
 		}
 	}
 </script>
