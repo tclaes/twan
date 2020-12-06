@@ -7,9 +7,9 @@
 </template>
 
 <script>
-	import Dinosaur from './Dinosaur.vue';
-	import Twan from './Twan.vue';
-	import Down from './Down.vue';
+	import Dinosaur from './../components/Dinosaur.vue';
+	import Twan from './../components/Twan.vue';
+	import Down from './../components/Down.vue';
 
 export default {
   name: "Splash",
