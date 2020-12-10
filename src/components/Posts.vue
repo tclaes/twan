@@ -18,8 +18,8 @@ export default {
     Post
   },
   methods: {
-    async getContent() {
-      await getPosts().then(response => this.posts = response);
+    getContent() {
+      getPosts().then(response => this.posts = response);
     }
   },
   created () {
