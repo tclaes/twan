@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="home">
 		<Splash />
 		<TwansStorie />
 	</div>
@@ -10,7 +10,7 @@
 	import TwansStorie from './../components/TwansStorie';
 		
 	export default {
-		name: 'App',
+		name: 'Home',
 		components: {
 			Splash,
 			TwansStorie,
