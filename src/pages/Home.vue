@@ -6,8 +6,8 @@
 </template>
 
 <script>
-	import Splash from './components/Splash.vue';
-	import TwansStorie from './components/TwansStorie';
+	import Splash from './../components/Splash.vue';
+	import TwansStorie from './../components/TwansStorie';
 		
 	export default {
 		name: 'App',
@@ -21,14 +21,14 @@
 <style>
 	@font-face {
 		font-family: 'Little Dinosaur';
-		src: url('./assets/fonts/LittleDinosaur.otf');
+		src: url('./../assets/fonts/LittleDinosaur.otf');
 		font-weight: 400;
 		font-style: normal;
 	}
 
 	@font-face {
 		font-family: 'Little Dinosaur';
-		src: url('./assets/fonts/LittleDinosaur-Bold.otf');
+		src: url('./../assets/fonts/LittleDinosaur-Bold.otf');
 		font-weight: 700;
 		font-style: normal;
 	}
