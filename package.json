@@ -8,6 +8,15 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
+  "lint-staged": {
+   "*.js": [ "lint" ],
+    "*.vue": [ "lint" ]
+},
+  "husky": { 
+   "hooks": {
+      "pre-commit": "yarn run test:unit"
+   }
+ },
   "dependencies": {
     "@prismicio/vue": "^2.0.7",
     "apollo-cache-inmemory": "^1.6.6",
@@ -17,6 +26,7 @@
     "core-js": "^3.6.5",
     "graphql": "^15.4.0",
     "graphql-tag": "^2.11.0",
+    "husky": "^4.3.5",
     "postcss": "^8.1.13",
     "prismic-dom": "^2.2.4",
     "prismic-javascript": "^3.0.2",
