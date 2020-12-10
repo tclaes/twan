@@ -8,10 +8,6 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
-  "lint-staged": {
-   "*.js": [ "lint" ],
-    "*.vue": [ "lint" ]
-},
   "husky": { 
    "hooks": {
       "pre-commit": "yarn run test:unit"
