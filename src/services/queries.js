@@ -14,10 +14,11 @@ export async function getPosts() {
   return await client.query({
 		query: gql`
 			query {
-				allPosts {
+				allPosts(sortBy:meta_firstPublicationDate_ASC) {
 					edges {
 						node {
 							title,
+              image,
               content
 						}
 					}

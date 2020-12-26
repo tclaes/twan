@@ -1,6 +1,14 @@
 <template>
   <h2>{{post.node.title[0].text}}</h2>
-  <div v-html="content"></div>
+  <div>
+    
+    <div v-if="post.node.image">
+      {{post.node.image}}
+      <img :src="img.url" :alt="img.alt">
+    </div>
+    <div v-html="content"></div>
+  </div>
+  
 </template>
 
 <script>
@@ -14,6 +22,9 @@
     computed: {
       content() {
           return PrismicDOM.RichText.asHtml(this.post.node.content, linkResolver);
+      },
+      img() {
+        return this.post.node.image
       }
     }
   }
