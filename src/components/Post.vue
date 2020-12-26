@@ -29,7 +29,7 @@
         return this.post.image
       },
       img_thumbnail() {
-        return this.post.image.thumbnail? this.post.image.thumbnail : this.post.node.image
+        return this.post.image.thumbnail? this.post.image.thumbnail : this.post.image
       }
     }
   }
