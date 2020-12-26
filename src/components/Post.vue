@@ -4,7 +4,6 @@
     <div class="date">{{post.node.creation_date}}</div>
   </section>
   <div class="columns">
-    
     <div v-if="post.node.image" class="image">
       <img :src="img.url" :alt="img.alt" width="200">
     </div>
@@ -40,10 +39,12 @@
 		font-size: 1.6rem;
 		font-weight: bold;
 	}
+
   .date {
     font-size: 0.8rem;
     font-style: italic;
   }
+
   .post-header {
     display: flex;
     justify-content: space-between;
