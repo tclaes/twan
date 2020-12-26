@@ -4,13 +4,11 @@
     <div class="date">{{post.creation_date}}</div>
   </section>
   <div class="columns">
-    
     <div v-if="post.image" class="image">
       <img :src="img_thumbnail.url" :alt="img_thumbnail.alt" width="200">
     </div>
     <div v-html="content" class="content"></div>
   </div>
-  
 </template>
 
 <script>
