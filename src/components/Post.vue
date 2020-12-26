@@ -1,5 +1,8 @@
 <template>
-  <h2>{{post.node.title[0].text}}</h2>
+  <section class="post-header">
+    <h2>{{post.node.title[0].text}}</h2>
+    <date>{{post.node.creation_date}}</date>
+  </section>
   <div class="columns">
     
     <div v-if="post.node.image" class="image">
@@ -34,9 +37,13 @@
 		color: #333;
     font-family: "Little Dinosaur";
 		margin: 0;
-		font-size: 2rem;
-		font-weight: normal;
+		font-size: 1.6rem;
+		font-weight: bold;
 	}
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+  }
   .columns{
     display: flex;
   }

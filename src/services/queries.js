@@ -17,6 +17,7 @@ export async function getPosts() {
 				allPosts(sortBy:meta_firstPublicationDate_ASC) {
 					edges {
 						node {
+              creation_date,
 							title,
               image,
               content
