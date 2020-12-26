@@ -1,14 +1,13 @@
 <template>
   <section class="post-header">
     <h2>{{post.node.title[0].text}}</h2>
-    <date>{{post.node.creation_date}}</date>
+    <div class="date">{{post.node.creation_date}}</div>
   </section>
   <div class="columns">
-    
     <div v-if="post.node.image" class="image">
       <img :src="img.url" :alt="img.alt" width="200">
     </div>
-    <div v-html="content"></div>
+    <div v-html="content" class="content"></div>
   </div>
   
 </template>
@@ -40,16 +39,26 @@
 		font-size: 1.6rem;
 		font-weight: bold;
 	}
+
+  .date {
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+
   .post-header {
     display: flex;
     justify-content: space-between;
   }
   .columns{
     display: flex;
+    flex-wrap: wrap;
+  }
+  .content {
+    flex: 1 1 70%;
   }
   .image img {
-    padding-right: 3rem;
-    margin: 1rem;
+    border-radius: .5rem;
+    margin: 1rem 2rem;
     width: 200px;
   }
 </style>
