@@ -8,7 +8,7 @@
     <div v-if="post.node.image" class="image">
       <img :src="img.url" :alt="img.alt" width="200">
     </div>
-    <div v-html="content"></div>
+    <div v-html="content" class="content"></div>
   </div>
   
 </template>
@@ -50,6 +50,10 @@
   }
   .columns{
     display: flex;
+    flex-wrap: wrap;
+  }
+  .content {
+    flex: 1 1 70%;
   }
   .image img {
     border-radius: .5rem;
