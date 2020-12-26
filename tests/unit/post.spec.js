@@ -50,7 +50,9 @@ describe('Post.vue Test', () => {
       }}
     });
 
+    expect(wrapper.exists()).toBe(true)  
     expect(wrapper.find('div').classes()).toContain('date');
-
+    expect(wrapper.findAll('div')[1].classes()).toContain('columns');
+    
   })
 })
