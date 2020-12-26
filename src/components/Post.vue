@@ -34,8 +34,8 @@
 		color: #333;
     font-family: "Little Dinosaur";
 		margin: 0;
-		font-size: 2rem;
-		font-weight: normal;
+		font-size: 1.6rem;
+		font-weight: bold;
 	}
   .columns{
     display: flex;
