@@ -48,8 +48,8 @@
     display: flex;
   }
   .image img {
-    padding-right: 3rem;
-    margin: 1rem;
+    border-radius: .5rem;
+    margin: 1rem 2rem;
     width: 200px;
   }
 </style>
