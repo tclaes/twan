@@ -1,10 +1,9 @@
 <template>
   <h2>{{post.node.title[0].text}}</h2>
-  <div>
+  <div class="columns">
     
-    <div v-if="post.node.image">
-      {{post.node.image}}
-      <img :src="img.url" :alt="img.alt">
+    <div v-if="post.node.image" class="image">
+      <img :src="img.url" :alt="img.alt" width="200">
     </div>
     <div v-html="content"></div>
   </div>
@@ -38,4 +37,12 @@
 		font-size: 2rem;
 		font-weight: normal;
 	}
+  .columns{
+    display: flex;
+  }
+  .image img {
+    padding-right: 3rem;
+    margin: 1rem;
+    width: 200px;
+  }
 </style>
