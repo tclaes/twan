@@ -1,12 +1,12 @@
 <template>
   <section class="post-header">
-    <h2>{{post.node.title[0].text}}</h2>
-    <div class="date">{{post.node.creation_date}}</div>
+    <h2>{{post.title[0].text}}</h2>
+    <div class="date">{{post.creation_date}}</div>
   </section>
   <div class="columns">
     
-    <div v-if="post.node.image" class="image">
-      <img :src="img.url" :alt="img.alt" width="200">
+    <div v-if="post.image" class="image">
+      <img :src="img_thumbnail.url" :alt="img_thumbnail.alt" width="200">
     </div>
     <div v-html="content" class="content"></div>
   </div>
@@ -23,10 +23,13 @@
     },
     computed: {
       content() {
-          return PrismicDOM.RichText.asHtml(this.post.node.content, linkResolver);
+        return PrismicDOM.RichText.asHtml(this.post.content, linkResolver);
       },
       img() {
-        return this.post.node.image
+        return this.post.image
+      },
+      img_thumbnail() {
+        return this.post.image.thumbnail? this.post.image.thumbnail : this.post.node.image
       }
     }
   }
