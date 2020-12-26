@@ -40,6 +40,10 @@
 		font-size: 1.6rem;
 		font-weight: bold;
 	}
+  date {
+    font-size: 0.8rem;
+    font-style: italic;
+  }
   .post-header {
     display: flex;
     justify-content: space-between;
