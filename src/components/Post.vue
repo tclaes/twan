@@ -1,7 +1,7 @@
 <template>
   <section class="post-header">
     <h2>{{post.node.title[0].text}}</h2>
-    <date>{{post.node.creation_date}}</date>
+    <div class="date">{{post.node.creation_date}}</div>
   </section>
   <div class="columns">
     
@@ -40,7 +40,7 @@
 		font-size: 1.6rem;
 		font-weight: bold;
 	}
-  date {
+  .date {
     font-size: 0.8rem;
     font-style: italic;
   }
