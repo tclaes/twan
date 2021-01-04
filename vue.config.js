@@ -1,3 +1,9 @@
 module.exports = {
-  runtimeCompiler: true
+  runtimeCompiler: true,
+  pwa: {
+    workboxOptions: {
+      skipWaiting: true,
+      clientsClaim: true,
+    }
+  }
 }
