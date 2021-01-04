@@ -6,8 +6,7 @@
   </section>
   <div class="columns">
     <div v-if="post.image" class="image">
-      <img :src="img_thumbnail.url" :alt="img_thumbnail.alt" width="200">
-
+      <Img v-bind:image="img" />
     </div>
     <div v-html="content" class="content"></div>
   </div>
@@ -16,8 +15,12 @@
 <script>
   import linkResolver from "./../prismic/link-resolver";
   import PrismicDOM from 'prismic-dom';
+  import Img from './../elements/Img-modal'
 
   export default {
+    components: {
+      Img
+    },
     props: {
       post: Object
     },
@@ -27,9 +30,6 @@
       },
       img() {
         return this.post.image
-      },
-      img_thumbnail() {
-        return this.post.image.thumbnail? this.post.image.thumbnail : this.post.image
       }
     }
   }
@@ -59,10 +59,5 @@
   }
   .content {
     flex: 1 1 70%;
-  }
-  .image img {
-    border-radius: .5rem;
-    margin: 1rem 2rem;
-    width: 200px;
   }
 </style>
