@@ -4,9 +4,10 @@
       :alt="img_thumbnail.alt"
       width="200" 
       @click="fullWidthImage = !fullWidthImage"
+      loading="lazy"
     >
-    <div v-if="fullWidthImage" :class="{ full: fullWidthImage }" @click="fullWidthImage = !fullWidthImage">
-      <img
+    <div v-show="fullWidthImage" :class="{ full: fullWidthImage }" @click="fullWidthImage = !fullWidthImage">
+      <img loading="lazy"
         :src="img.url" 
         :alt="img.alt"
       >
@@ -42,7 +43,7 @@ export default {
     margin: 1rem 2rem;
     width: 200px;
   }
-  
+
   .full {
     background: rgba(3, 3, 3, 0.25);
     cursor: pointer;
