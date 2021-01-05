@@ -5,7 +5,7 @@
       width="200" 
       @click="fullWidthImage = !fullWidthImage"
     >
-    <div class="hidden" :class="{ full: fullWidthImage }" @click="fullWidthImage = !fullWidthImage">
+    <div v-if="fullWidthImage" :class="{ full: fullWidthImage }" @click="fullWidthImage = !fullWidthImage">
       <img
         :src="img.url" 
         :alt="img.alt"
@@ -42,11 +42,7 @@ export default {
     margin: 1rem 2rem;
     width: 200px;
   }
-
-  .hidden {
-    display: none;
-  }
-
+  
   .full {
     background: rgba(3, 3, 3, 0.25);
     cursor: pointer;
