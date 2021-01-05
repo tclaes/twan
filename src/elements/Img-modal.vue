@@ -4,14 +4,14 @@
       :alt="img_thumbnail.alt"
       width="200" 
       @click="fullWidthImage = !fullWidthImage"
+      loading="lazy"
     >
-    <div class="hidden" :class="{ full: fullWidthImage }" @click="fullWidthImage = !fullWidthImage">
-      <img
+    <div v-show="fullWidthImage" :class="{ full: fullWidthImage }" @click="fullWidthImage = !fullWidthImage">
+      <img loading="lazy"
         :src="img.url" 
         :alt="img.alt"
       >
     </div>
-
 </template>
 
 <script>

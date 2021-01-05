@@ -1,6 +1,5 @@
 <template>
   <section class="post-header">
-
     <h2>{{post.title[0].text}}</h2>
     <div class="date">{{post.creation_date}}</div>
   </section>
