@@ -12,7 +12,6 @@
         :alt="img.alt"
       >
     </div>
-
 </template>
 
 <script>
@@ -42,6 +41,10 @@ export default {
     cursor: pointer;
     margin: 1rem 2rem;
     width: 200px;
+  }
+
+  .hidden {
+    display: none;
   }
 
   .full {
