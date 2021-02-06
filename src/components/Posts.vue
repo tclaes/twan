@@ -1,5 +1,5 @@
 <template>
-  <Sorting></Sorting>
+  <Sorting class="sorting"></Sorting>
   <div v-for="(post) in posts" :key="post.id">
     <Post :post="post.node" />
   </div>  
@@ -34,3 +34,11 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+  .sorting {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0;
+  }
+</style>
