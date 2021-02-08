@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.38fdbb9f1a0c10e8dee5f30e6daf9c55.js"
+  "/precache-manifest.d4dd2d064b024cf80797fca72bd4852a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "twan"});
