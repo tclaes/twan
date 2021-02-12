@@ -37,10 +37,12 @@ export default {
 
 <style lang="scss" scoped>
   img {
-    border-radius: .5rem;
+    --border-radius: 5px;
+    border-radius: .2rem;
     cursor: pointer;
     margin: 1rem 2rem 1rem 0;
     width: 200px;
+    box-shadow: var(--border-radius) var(--border-radius) 0px 0px rgba(186,186,186,0.2);
   }
 
   .hidden {
