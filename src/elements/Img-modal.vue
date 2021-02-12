@@ -39,7 +39,7 @@ export default {
   img {
     border-radius: .5rem;
     cursor: pointer;
-    margin: 1rem 2rem;
+    margin: 1rem 2rem 1rem 0;
     width: 200px;
   }
 

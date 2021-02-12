@@ -1,7 +1,7 @@
 <template>
   <Sorting class="sorting"></Sorting>
-  <div v-for="(post) in posts" :key="post.id">
-    <Post :post="post.node" />
+  <div v-for="(post) in posts" :key="post.id" class="post">
+    <Post :post="post.node" class="post" />
   </div>  
 </template>
 
@@ -36,6 +36,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+  .post {
+    margin: 2rem 0
+  }
+
   .sorting {
     display: flex;
     justify-content: flex-end;
