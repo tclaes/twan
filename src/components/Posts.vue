@@ -1,7 +1,7 @@
 <template>
   <Sorting class="sorting"></Sorting>
   <div v-for="(post) in posts" :key="post.id" class="post">
-    <Post :post="post.node" class="post" />
+    <Post :post="post.node" />
   </div>  
 </template>
 

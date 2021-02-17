@@ -1,23 +1,27 @@
 import { mount } from '@vue/test-utils';
-import Post from '@/components/Post.vue';
+import { createStore } from 'vuex';
+import Posts from '@/components/Posts.vue';
 
-describe('Post.vue Test', () => {
-  it('should contain date', () => {
-    // render the component
-    const wrapper = mount(Post, {
-      propsData: {
-        post: {
-          "creation_date": "2020-11-04",
-          "title": [{
-            "type": "heading1",
-            "text": "Dag 0",
-            "spans": []
-          }],
-          "image": {
-            "dimensions": {
-              "width": 3024,
-              "height": 4032
-            },
+describe('Posts.vue Test', () => {
+  let store;
+
+  beforeEach(() => {
+    store = createStore({
+      state() {
+        return {
+          posts: [{
+            "node": {
+              "creation_date": "2020-11-04",
+              "title": [{
+                "type": "heading1",
+                "text": "Dag 0",
+                "spans": []
+              }],
+            "image": {
+              "dimensions": {
+                "width": 3024,
+                "height": 4032
+              },
             "alt": "First kiss from mommie",
             "copyright": null,
             "url": "https://images.prismic.io/twanclaes/3690f057-9717-4262-92a0-07714e2aa63b_README.jpg?auto=compress,format",
@@ -47,11 +51,29 @@ describe('Post.vue Test', () => {
             "spans": []
           }]
       }}
+    ]}
+    },
+      mutations: {
+        setPosts (state, payload) {
+          state.posts = payload;
+        },
+        reversePosts (state) {
+          state.posts = state.posts.reverse();
+        }
+      }
     });
-
-    expect(wrapper.exists()).toBe(true)  
-    expect(wrapper.find('div').classes()).toContain('date');
-    expect(wrapper.findAll('div')[1].classes()).toContain('columns');
-    
   })
+
+
+  it('should contain date', () => {
+      // render the component
+  const wrapper = mount(Posts, {
+    global: {
+        plugins: [store]
+      }
+    });
+  
+    expect(wrapper.exists()).toBe(true);
+  })
+
 })
