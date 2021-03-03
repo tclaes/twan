@@ -1,5 +1,5 @@
 module.exports = {
-  preset: '@vue/cli-plugin-unit-jest',
+  preset: '@vue/cli-plugin-unit-jest/presets/typescript-and-babel',
   collectCoverage: true,
 
   collectCoverageFrom: [
@@ -9,6 +9,7 @@ module.exports = {
 
   coverageReporters: [
     "html",
+    "text",
     "text-summary"
   ],
 
