@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import ImgModal from '@/elements/Img-modal.vue';
 
 describe('Dinosaur component Test', () => {
-  let wrapper;
+  let wrapper: any;
 
   beforeEach(() => {
     wrapper = mount(ImgModal, {

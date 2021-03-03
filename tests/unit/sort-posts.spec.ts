@@ -3,7 +3,7 @@ import Sort from '@/elements/Sort-posts.vue';
 
 describe('Sort posting', () => {
 
-  let wrapper;
+  let wrapper: any;
 
   beforeEach(() => {
     wrapper = mount(Sort)

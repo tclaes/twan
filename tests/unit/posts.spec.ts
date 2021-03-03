@@ -3,7 +3,7 @@ import { createStore } from 'vuex';
 import Posts from '@/components/Posts.vue';
 
 describe('Posts.vue Test', () => {
-  let store;
+  let store: any;
 
   beforeEach(() => {
     store = createStore({
@@ -54,7 +54,7 @@ describe('Posts.vue Test', () => {
     ]}
     },
       mutations: {
-        setPosts (state, payload) {
+        setPosts (state: any, payload) {
           state.posts = payload;
         },
         reversePosts (state) {

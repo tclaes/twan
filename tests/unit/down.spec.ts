@@ -3,7 +3,7 @@ import Down from '@/elements/Down.vue';
 
 describe('Down arrow component Test', () => {
 
-  let wrapper;
+  let wrapper: any;
 
   beforeEach(() => {
     wrapper = mount(Down, {
