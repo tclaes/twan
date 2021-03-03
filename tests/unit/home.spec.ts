@@ -5,7 +5,7 @@ import Splash from '@/components/Splash.vue';
 import TwansStorie from '@/components/TwansStorie.vue';
 
 describe('Home.vue Test', () => {
-  let store;
+  let store: any;
 
   beforeEach(() => {
     store = createStore({
@@ -15,7 +15,7 @@ describe('Home.vue Test', () => {
         }
       },
       mutations: {
-        setPosts (state, payload) {
+        setPosts (state: any, payload) {
           state.posts = payload;
         },
         reversePosts (state) {

@@ -16,7 +16,7 @@ const store = createStore({
     }
   },
   mutations: {
-    setPosts (state, payload) {
+    setPosts (state:any, payload) {
       state.posts = payload;
     },
     reversePosts (state) {
