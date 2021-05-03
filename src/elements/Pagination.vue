@@ -23,14 +23,14 @@ export default {
   },
   methods: {
     PreviousResults() {
-      getPreviousPosts(this.$store.state.pageInfo.endCursor).then(
+      getPreviousPosts(this.$store.state.pageInfo.startCursor).then(
         (response) => {
           this.$store.commit("setPosts", response);
         }
       );
     },
     NextResults() {
-      getPosts(this.$store.state.pageInfo.startCursor).then((response) => {
+      getPosts(this.$store.state.pageInfo.endCursor).then((response) => {
         this.$store.commit("setPosts", response);
       });
     },
