@@ -14,8 +14,10 @@
   #dinosaur {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
     width: 100%;
   }
+
   img {
     display: flex;
     flex: 0 1 300px;
