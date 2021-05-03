@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93635cbf-8d4f-4084-a8c4-1d82c21428e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Pagination.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Pagination.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+    <list default="true" id="93635cbf-8d4f-4084-a8c4-1d82c21428e2" name="Default Changelist" comment="pagination fix startCursor">
+      <change beforePath="$PROJECT_DIR$/.idea/twan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/twan.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/components/Post.vue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/components/Posts.vue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/components/Splash.vue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/components/TwansStorie.vue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/components/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/elements/Dinosaur.vue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/elements/Down.vue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/elements/Twan.vue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/elements/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/main.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/pages/About.vue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/pages/Home.vue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/pages/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/prismic/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/prismic/link-resolver.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/registerServiceWorker.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/router/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/router/index.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/services/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/src/services/queries.js.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +87,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620072273440</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="pagination fix startCursor">
+      <created>1620073053599</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620073053599</updated>
+    </task>
+    <task id="LOCAL-00004" summary="pagination fix startCursor">
+      <created>1620073143745</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620073143745</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,7 +109,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pagination component first implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="pagination component first implementation" />
+    <MESSAGE value="pagination fix startCursor" />
+    <option name="LAST_COMMIT_MESSAGE" value="pagination fix startCursor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
