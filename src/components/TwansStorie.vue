@@ -2,7 +2,6 @@
   <div id="twan-storie">
     <h1 class="uppercase">Twan's verhaal in het kort</h1>
     <Posts />
-    <h3>to be continued...</h3>
   </div>
 </template>
 
