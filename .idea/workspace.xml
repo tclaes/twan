@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93635cbf-8d4f-4084-a8c4-1d82c21428e2" name="Default Changelist" comment="" />
+    <list default="true" id="93635cbf-8d4f-4084-a8c4-1d82c21428e2" name="Default Changelist" comment="pagination component first implementation">
+      <change afterPath="$PROJECT_DIR$/src/elements/Pagination.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TwansStorie.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TwansStorie.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/queries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/queries.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/home.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/home.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/img-modal.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/img-modal.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/posts.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/posts.spec.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1o7t0ZpPsPuurYhtidcQlljIATM" />
@@ -23,6 +44,10 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$USER_HOME$/.nvm/versions/node/v15.6.0/lib/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -37,10 +62,20 @@
       <workItem from="1612650939027" duration="68000" />
       <workItem from="1612651121610" duration="32000" />
       <workItem from="1612651156680" duration="657000" />
+      <workItem from="1614865830646" duration="932000" />
+      <workItem from="1614866776719" duration="1238000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pagination component first implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="pagination component first implementation" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
