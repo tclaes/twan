@@ -10,7 +10,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-export async function getPosts(cursor = "", amount = 5) {
+export async function getPosts(cursor = "", amount = 20) {
   return await client
     .query({
       query: gql`
@@ -50,7 +50,7 @@ export async function getPosts(cursor = "", amount = 5) {
     });
 }
 
-export async function getPreviousPosts(cursor = "", amount = 5) {
+export async function getPreviousPosts(cursor = "", amount = 20) {
   return await client
     .query({
       query: gql`
