@@ -1,20 +1,14 @@
 <template>
   <div class="pagination">
-    <a @click="PreviousResults" v-if="hasPreviousPage">Oudere berichten </a>
-    <a @click="NextResults" v-if="hasNextPage">Nieuwere berichten</a>
+    <a @click="MoreResults" v-if="hasNextPage">Meer berichten</a>
   </div>
 </template>
 
 <script>
-import { getPreviousPosts, getPosts } from "@/services/queries";
+import { getPosts } from "@/services/queries";
 
 export default {
   computed: {
-    hasPreviousPage() {
-      return this.$store.state.pageInfo
-        ? this.$store.state.pageInfo.hasPreviousPage
-        : false;
-    },
     hasNextPage() {
       return this.$store.state.pageInfo
         ? this.$store.state.pageInfo.hasNextPage
@@ -22,25 +16,11 @@ export default {
     },
   },
   methods: {
-    PreviousResults() {
-      getPreviousPosts(this.$store.state.pageInfo.startCursor)
+    MoreResults() {
+      getPosts(this.$store.state.sorting, this.$store.state.pageInfo.endCursor)
         .then((response) => {
-          this.$store.commit("setPosts", response);
+          this.$store.commit("addPosts", response);
         })
-        .then(() => this.scrollTo(window.innerHeight));
-    },
-    NextResults() {
-      getPosts(this.$store.state.pageInfo.endCursor)
-        .then((response) => {
-          this.$store.commit("setPosts", response);
-        })
-        .then(() => this.scrollTo(window.innerHeight));
-    },
-    scrollTo(top) {
-      window.scrollTo({
-        top: top,
-        behavior: "smooth",
-      });
     },
   },
 };

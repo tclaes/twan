@@ -19,8 +19,8 @@ describe("Home.vue Test", () => {
         setPosts(state: any, payload) {
           state.posts = payload;
         },
-        reversePosts(state) {
-          state.posts = state.posts.reverse();
+        addPosts(state, payload) {
+          state.posts = [...state.posts, ...payload.posts];
         },
       },
     });

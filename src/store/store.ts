@@ -5,6 +5,7 @@ const store = createStore({
     return {
       pageInfo: {},
       posts: {},
+      sorting: 'DESC'
     };
   },
   mutations: {
@@ -12,9 +13,13 @@ const store = createStore({
       state.posts = payload.posts;
       state.pageInfo = payload.pageInfo;
     },
-    reversePosts(state) {
-      state.posts = state.posts.reverse();
+    addPosts(state: any, payload) {
+      state.posts  = [...state.posts, ...payload.posts];
+      state.pageInfo = payload.pageInfo;
     },
+    setSorting(state: any, payload) {
+      state.sorting = payload;
+    }
   },
 });
 
