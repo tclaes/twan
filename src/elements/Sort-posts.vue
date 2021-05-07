@@ -1,17 +1,21 @@
 <template>
   <div id="sorting">
-    <select name="posts" id="posts" @change="onChange">
-      <option value="first" default selected>Oudste bericht eerst</option>
-      <option value="last">Nieuwste bericht eerst</option>
+    <select name="posts" id="posts" @change="onChange($event)">
+      <option value="ASC" selected>Oudste bericht eerst</option>
+      <option value="DESC">Nieuwste bericht eerst</option>
     </select>
   </div>
 </template>
 
 <script>
+import { getPosts } from "@/services/queries";
+
 export default {
   methods: {
-    onChange() {
-      this.$store.commit('reversePosts')
+    onChange(e) {
+      getPosts(e.target.value).then((response) => {
+        this.$store.commit("setPosts", response);
+      });
     }
   }
 }

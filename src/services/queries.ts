@@ -10,13 +10,13 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-export async function getPosts(cursor = "", amount = 20) {
+export async function getPosts(sorting = 'DESC',cursor = "", amount = 20) {
   return await client
     .query({
       query: gql`
         query {
           allPosts(
-            sortBy: meta_firstPublicationDate_DESC
+            sortBy: meta_firstPublicationDate_${sorting}
             after: "${cursor}"
             first: ${amount}
           ) {
