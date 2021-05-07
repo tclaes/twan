@@ -1,8 +1,8 @@
 <template>
   <div id="sorting">
     <select name="posts" id="posts" @change="onChange($event)">
-      <option value="ASC" selected>Oudste bericht eerst</option>
-      <option value="DESC">Nieuwste bericht eerst</option>
+      <option value="ASC">Oudste bericht eerst</option>
+      <option value="DESC" selected>Nieuwste bericht eerst</option>
     </select>
   </div>
 </template>
@@ -15,6 +15,7 @@ export default {
     onChange(e) {
       getPosts(e.target.value).then((response) => {
         this.$store.commit("setPosts", response);
+        this.$store.commit("setSorting", e.target.value);
       });
     }
   }
