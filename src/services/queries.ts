@@ -16,7 +16,7 @@ export async function getPosts(cursor = "", amount = 20) {
       query: gql`
         query {
           allPosts(
-            sortBy: meta_firstPublicationDate_ASC
+            sortBy: meta_firstPublicationDate_DESC
             after: "${cursor}"
             first: ${amount}
           ) {
