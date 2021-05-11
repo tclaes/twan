@@ -9,19 +9,24 @@
     </div>
     <div v-html="content" class="content"></div>
   </div>
+  <div v-if="post.body">
+    <ImageGallery v-bind:imgGallery="imgGallery" />
+  </div>
 </template>
 
 <script>
 import linkResolver from "./../prismic/link-resolver";
 import PrismicDOM from "prismic-dom";
 import Img from "./../elements/Img-modal";
+import ImageGallery from "@/components/ImageGallery";
 
 export default {
   components: {
-    Img,
+    ImageGallery,
+    Img
   },
   props: {
-    post: Object,
+    post: Object
   },
   computed: {
     content() {
@@ -30,7 +35,10 @@ export default {
     img() {
       return this.post.image;
     },
-  },
+    imgGallery() {
+      return this.post.body ? this.post.body[0].fields : null;
+    }
+  }
 };
 </script>
 
@@ -52,10 +60,12 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
+
 .columns {
   display: flex;
   flex-wrap: wrap;
 }
+
 .content {
   flex: 1 1 70%;
 }

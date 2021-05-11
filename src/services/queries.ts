@@ -5,12 +5,12 @@ import gql from "graphql-tag";
 
 const client = new ApolloClient({
   link: PrismicLink({
-    uri: "https://twanclaes.prismic.io/graphql",
+    uri: "https://twanclaes.prismic.io/graphql"
   }),
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache()
 });
 
-export async function getPosts(sorting = 'DESC',cursor = "", amount = 20) {
+export async function getPosts(sorting = "DESC", cursor = "", amount = 20) {
   return await client
     .query({
       query: gql`
@@ -33,20 +33,28 @@ export async function getPosts(sorting = 'DESC',cursor = "", amount = 20) {
                 title
                 image
                 content
+                body {
+                  ... on PostBodyImage_gallery {
+                    type,
+                    fields {
+                      gallery_image
+                    }
+                  }
+                __typename
+                }
               }
             }
           }
         }
-      `,
+      `
     })
-    .then((response) => {
+    .then(response => {
       return {
         pageInfo: response.data.allPosts.pageInfo,
-        posts: response.data.allPosts.edges,
+        posts: response.data.allPosts.edges
       };
     })
-    .catch((error) => {
+    .catch(error => {
       return console.error(error);
     });
 }
-
