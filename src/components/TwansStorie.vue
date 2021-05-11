@@ -1,8 +1,8 @@
 <template>
-  <div id="twan-storie">
+  <section id="twan-storie">
     <h1 class="uppercase">Twan's verhaal in het kort</h1>
     <Posts />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -10,8 +10,8 @@ import Posts from "./Posts";
 export default {
   name: "TwansStorie",
   components: {
-    Posts,
-  },
+    Posts
+  }
 };
 </script>
 
