@@ -1,7 +1,7 @@
 <template>
-  <nav class="navigation" v-show="scrolled">
+  <nav class="navigation">
     <ul>
-      <li><router-link to="home">Home</router-link></li>
+      <li><router-link to="/">Home</router-link></li>
       <li><router-link to="about">About</router-link></li>
     </ul>
   </nav>
@@ -9,23 +9,7 @@
 
 <script>
 export default {
-  name: "Navigation",
-  data() {
-    return {
-      scrolled: false
-    };
-  },
-  methods: {
-    handleScroll() {
-      this.scrolled = window.scrollY > window.innerHeight;
-    }
-  },
-  created() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  unmounted() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
+  name: "Navigation"
 };
 </script>
 
