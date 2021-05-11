@@ -12,17 +12,17 @@ describe("Home.vue Test", () => {
       state() {
         return {
           pageInfo: {},
-          posts: {},
+          posts: {}
         };
       },
       mutations: {
-        setPosts(state: any, payload) {
+        setPosts(state: any, payload: any) {
           state.posts = payload;
         },
-        addPosts(state, payload) {
+        addPosts(state: any, payload: any) {
           state.posts = [...state.posts, ...payload.posts];
-        },
-      },
+        }
+      }
     });
   });
 
@@ -30,8 +30,8 @@ describe("Home.vue Test", () => {
     // render the component
     const wrapper = mount(Home, {
       global: {
-        plugins: [store],
-      },
+        plugins: [store]
+      }
     });
 
     // check the components
