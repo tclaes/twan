@@ -1,8 +1,8 @@
 <template>
   <Sorting class="sorting"></Sorting>
-  <div v-for="post in posts" :key="post.id" class="post">
+  <article v-for="post in posts" :key="post.id" class="post">
     <Post :post="post.node" />
-  </div>
+  </article>
   <Pagination />
 </template>
 
@@ -19,23 +19,23 @@ export default {
   components: {
     Post,
     Sorting,
-    Pagination,
+    Pagination
   },
   computed: {
     posts() {
       return this.$store.state.posts;
-    },
+    }
   },
   methods: {
     getContent() {
-      getPosts().then((response) => {
+      getPosts().then(response => {
         this.$store.commit("setPosts", response);
       });
-    },
+    }
   },
   created() {
     this.getContent();
-  },
+  }
 };
 </script>
 
