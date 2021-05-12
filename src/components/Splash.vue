@@ -1,9 +1,9 @@
 <template>
-  <div class="splash">
+  <section class="splash">
     <Dinosaur />
     <Twan />
     <Down color="#fff" />
-  </div>
+  </section>
 </template>
 
 <script>
