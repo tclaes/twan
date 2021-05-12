@@ -25,5 +25,6 @@ export default {
 <style scoped lang="scss">
 .gallery {
   display: flex;
+  flex-wrap: wrap;
 }
 </style>
