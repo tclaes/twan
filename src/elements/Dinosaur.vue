@@ -15,17 +15,21 @@ export default {
   display: flex;
   justify-content: center;
   width: 100%;
+  max-height: 150px;
 }
 
 img {
   display: flex;
-  flex: 0 1 300px;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
   padding: 2rem;
 }
 
 @media screen and (min-width: 724px) {
   #dinosaur {
     margin-top: 2rem;
+    max-height: 300px;
   }
 }
 </style>

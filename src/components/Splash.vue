@@ -35,19 +35,27 @@ export default {
   background: #4ea888;
   display: grid;
   grid-template-rows: 1fr 2fr 100px;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   place-items: center;
   margin: 0 0 2rem;
 }
 
-@media (orientation: portrait) {
+@media (orientation: landscape) and (max-width: 768px) {
   .splash {
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    grid-template-rows: 1fr 1fr 100px;
+    height: 100%;
   }
 }
 
 #twan {
   align-self: end;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  #twan {
+    margin-bottom: 5rem;
+  }
 }
 </style>
