@@ -20,9 +20,9 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  margin: 100px 10rem 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
+  margin: 75px auto 0;
+  max-width: 1024px;
+  padding: 1rem;
 }
 </style>
