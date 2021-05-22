@@ -3,6 +3,7 @@
     :src="img_thumbnail.url"
     :alt="img_thumbnail.alt"
     width="200"
+    height="300"
     @click="fullWidthImage = !fullWidthImage"
     loading="lazy"
   />
@@ -41,6 +42,7 @@
     --border-radius: 5px;
     border-radius: 0.2rem;
     cursor: pointer;
+    height: auto;
     margin: 1rem 2rem 1rem 0;
     width: 200px;
     box-shadow: var(--border-radius) var(--border-radius) 0 0 rgba(186, 186, 186, 0.2);
