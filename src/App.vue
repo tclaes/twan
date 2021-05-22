@@ -4,8 +4,9 @@
 </template>
 
 <script>
-import Navigation from "@/components/Navigation";
-export default {
+  import Navigation from "@/components/Navigation";
+
+  export default {
   components: { Navigation },
   data() {
     return {
