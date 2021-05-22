@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import Splash from "./../components/Splash.vue";
-  import TwansStorie from "./../components/TwansStorie";
+  import Splash from './../components/Splash.vue'
+  import TwansStorie from './../components/TwansStorie'
 
   export default {
     name: 'Home',
