@@ -4,6 +4,6 @@ module.exports = {
     workboxOptions: {
       skipWaiting: true,
       clientsClaim: true,
-    }
-  }
+    },
+  },
 }

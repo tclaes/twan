@@ -7,46 +7,46 @@
 </template>
 
 <script>
-import { getPosts } from "@/services/queries";
-import Post from "./Post.vue";
-import Sorting from "./../elements/Sort-posts";
-import Pagination from "./../elements/Pagination";
+  import { getPosts } from '@/services/queries'
+  import Post from './Post.vue'
+  import Sorting from './../elements/Sort-posts'
+  import Pagination from './../elements/Pagination'
 
-export default {
-  data() {
-    return {};
-  },
-  components: {
-    Post,
-    Sorting,
-    Pagination
-  },
-  computed: {
-    posts() {
-      return this.$store.state.posts;
-    }
-  },
-  methods: {
-    getContent() {
-      getPosts().then(response => {
-        this.$store.commit("setPosts", response);
-      });
-    }
-  },
-  created() {
-    this.getContent();
+  export default {
+    components: {
+      Post,
+      Sorting,
+      Pagination,
+    },
+    data() {
+      return {}
+    },
+    computed: {
+      posts() {
+        return this.$store.state.posts
+      },
+    },
+    created() {
+      this.getContent()
+    },
+    methods: {
+      getContent() {
+        getPosts().then((response) => {
+          this.$store.commit('setPosts', response)
+        })
+      },
+    },
   }
-};
 </script>
 
 <style scoped lang="scss">
-.post {
-  margin: 2rem 0;
-}
+  .post {
+    margin: 2rem 0;
+  }
 
-.sorting {
-  display: flex;
-  justify-content: flex-end;
-  margin: 1rem 0;
-}
+  .sorting {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0;
+  }
 </style>

@@ -8,22 +8,22 @@
 </template>
 
 <script>
-import { getPosts } from "@/services/queries";
+  import { getPosts } from '@/services/queries'
 
-export default {
-  methods: {
-    onChange(e) {
-      getPosts(e.target.value).then((response) => {
-        this.$store.commit("setPosts", response);
-        this.$store.commit("setSorting", e.target.value);
-      });
-    }
+  export default {
+    methods: {
+      onChange(e) {
+        getPosts(e.target.value).then((response) => {
+          this.$store.commit('setPosts', response)
+          this.$store.commit('setSorting', e.target.value)
+        })
+      },
+    },
   }
-}
 </script>
 
 <style lang="scss" scoped>
   select {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 </style>
