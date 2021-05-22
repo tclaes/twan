@@ -1,11 +1,11 @@
 const { createApp } = require('vue')
-import App from "./App.vue";
+import App from './App.vue'
 
-import "./assets/css/styles.css";
-import "./registerServiceWorker";
-import router from "./router";
-import VueGtag from "vue-gtag-next";
-import store from "./store/store";
+import './assets/css/styles.css'
+import './registerServiceWorker'
+import router from './router'
+import VueGtag from 'vue-gtag-next'
+import store from './store/store'
 
 const app = createApp(App)
 

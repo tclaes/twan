@@ -1,21 +1,21 @@
-interface DocType { 
-  type: string;
-  uid: string;
+interface DocType {
+  type: string
+  uid: string
 }
 
-export default function (doc:DocType) {
+export default function (doc: DocType) {
   // Return the path depending on Prismic Document's type
 
   // If it's a Single Custom Type with the API ID of "home"
   if (doc.type === 'home') {
-    return '/';
+    return '/'
   }
 
   // If it is a Repeatable Custom Type with the API ID of "page" (must contain a UID field)
   if (doc.type === 'page') {
-    return '/page/' + doc.uid;
+    return '/page/' + doc.uid
   }
 
   // Default to the root
-  return '/';
+  return '/'
 }
