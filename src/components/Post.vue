@@ -15,10 +15,10 @@
 </template>
 
 <script>
-  import linkResolver from "./../prismic/link-resolver";
-  import PrismicDOM from "prismic-dom";
-  import Img from "./../elements/Img-modal";
-  import ImageGallery from "@/components/ImageGallery";
+  import linkResolver from './../prismic/link-resolver'
+  import PrismicDOM from 'prismic-dom'
+  import Img from './../elements/Img-modal'
+  import ImageGallery from '@/components/ImageGallery'
 
   export default {
     components: {

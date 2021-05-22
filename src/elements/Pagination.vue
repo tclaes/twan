@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import { getPosts } from "@/services/queries";
+  import { getPosts } from '@/services/queries'
 
   export default {
     computed: {

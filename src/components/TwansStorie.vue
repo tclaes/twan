@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import Posts from "./Posts";
+  import Posts from './Posts'
 
   export default {
     name: 'TwansStorie',

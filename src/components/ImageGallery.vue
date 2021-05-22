@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import Img from "./../elements/Img-modal";
+  import Img from './../elements/Img-modal'
 
   export default {
     components: {

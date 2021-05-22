@@ -7,10 +7,10 @@
 </template>
 
 <script>
-  import { getPosts } from "@/services/queries";
-  import Post from "./Post.vue";
-  import Sorting from "./../elements/Sort-posts";
-  import Pagination from "./../elements/Pagination";
+  import { getPosts } from '@/services/queries'
+  import Post from './Post.vue'
+  import Sorting from './../elements/Sort-posts'
+  import Pagination from './../elements/Pagination'
 
   export default {
     components: {
