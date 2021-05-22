@@ -1,15 +1,15 @@
 <template>
   <section class="gallery">
-    <div v-for="img in imgGallery" v-bind:key="img.url">
+    <div v-for="img in imgGallery" :key="img.url">
       <Img v-bind:image="img.gallery_image" />
     </div>
   </section>
 </template>
 
 <script>
-import Img from "./../elements/Img-modal";
+  import Img from "./../elements/Img-modal";
 
-export default {
+  export default {
   data() {
     return {};
   },
