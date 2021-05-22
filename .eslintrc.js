@@ -1,7 +1,14 @@
 // .eslintrc.js
 module.exports = {
-  extends: ['plugin:vue/vue3-essential', 'plugin:prettier-vue/recommended', 'prettier'],
-
+  extends: [
+    'plugin:vue/vue3-essential',
+    'plugin:prettier-vue/recommended',
+    '@vue/typescript',
+    'prettier',
+  ],
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+  },
   settings: {
     'prettier-vue': {
       // Settings for how to process Vue SFC Blocks
