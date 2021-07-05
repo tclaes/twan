@@ -10,6 +10,7 @@
     "start": "npm run serve"
   },
   "dependencies": {
+    "@cypress/vue": "^3.0.0-beta.3",
     "@prismicio/vue": "^2.0.7",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
@@ -40,6 +41,7 @@
     "@vue/test-utils": "^2.0.0-0",
     "autoprefixer": "^10.0.2",
     "babel-eslint": "^10.1.0",
+    "cypress": "^7.6.0",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier-vue": "^3.0.0",
