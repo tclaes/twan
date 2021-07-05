@@ -62,7 +62,9 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run test:unit"
+      "pre-commit": "npm run lint",
+      "pre-push": "yarn run test:unit"
+
     }
   }
 }
