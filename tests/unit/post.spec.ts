@@ -1,5 +1,5 @@
-import { mount } from "@vue/test-utils";
-import Post from "@/components/Post.vue";
+import { mount } from '@vue/test-utils'
+import Post from '@/components/Post.vue'
 
 describe('Post.vue Test', () => {
   it('should contain date', () => {

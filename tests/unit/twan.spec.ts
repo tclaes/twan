@@ -1,5 +1,5 @@
-import { mount } from "@vue/test-utils";
-import Twan from "@/elements/Twan.vue";
+import { mount } from '@vue/test-utils'
+import Twan from '@/elements/Twan.vue'
 
 describe('Splash Test', () => {
   it('should contain components', async () => {

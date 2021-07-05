@@ -1,5 +1,5 @@
-import { mount } from "@vue/test-utils";
-import Dinosaur from "@/elements/Dinosaur.vue";
+import { mount } from '@vue/test-utils'
+import Dinosaur from '@/elements/Dinosaur.vue'
 
 describe('Dinosaur component Test', () => {
   it('should contain components', async () => {
