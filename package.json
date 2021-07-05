@@ -62,9 +62,5 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ],
-  "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
-  }
+  ]
 }
