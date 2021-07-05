@@ -6,7 +6,7 @@ describe("Down arrow component Test", () => {
 
   beforeEach(() => {
     wrapper = mount(Down, {
-      propsData: {
+      props: {
         color: "#fff"
       }
     });
