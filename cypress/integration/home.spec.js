@@ -6,7 +6,6 @@ context('Home', () => {
   })
 
   it('.scrollIntoView() - scroll an element into view', () => {
-
     cy.get('.splash a').should('be.visible')
     cy.get('.splash a').click()
 
@@ -18,5 +17,7 @@ context('Home', () => {
 
     // at first, no option should be selected
     cy.get('select#posts option:selected').should('have.text', 'Nieuwste bericht eerst')
+
+    cy.get('select#posts').select('Oudste bericht eerst').should('have.value', 'ASC')
   })
 })

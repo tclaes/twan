@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "start": "npm run serve"
+    "start": "npm run serve",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@cypress/vue": "^3.0.0-beta.3",
@@ -46,7 +47,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier-vue": "^3.0.0",
     "eslint-plugin-vue": "^7.9.0",
-    "husky": "^4.3.5",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0",
     "postcss": "^8.1.13",
     "prettier": "^1.19.1",
     "register-service-worker": "^1.7.1",
@@ -61,9 +63,8 @@
     "last 2 versions",
     "not dead"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run test:unit"
-    }
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
