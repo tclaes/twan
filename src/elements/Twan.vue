@@ -28,7 +28,7 @@
     font-weight: normal;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (min-height: 768px) {
     h1 {
       font-size: 128px;
     }

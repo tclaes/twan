@@ -58,4 +58,10 @@
       margin-bottom: 5rem;
     }
   }
+
+  @media screen and (min-height: 1024px) and (min-width: 768px) {
+    #twan {
+      margin-bottom: 15rem;
+    }
+  }
 </style>
