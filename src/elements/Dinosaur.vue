@@ -1,6 +1,6 @@
 <template>
   <div id="dinosaur">
-    <img src="../../public/img/patchi.svg" alt="Patchi" width="300" height="150" />
+    <img src="/img/patchi.svg" alt="Patchi" width="300" height="150" />
   </div>
 </template>
 
