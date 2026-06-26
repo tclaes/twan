@@ -11,40 +11,37 @@
 </script>
 
 <template>
-  <PrismicImage
-    :field="thumbnailField"
-    width="200"
-    height="300"
-    loading="lazy"
-    @click="fullWidthImage = !fullWidthImage"
-  />
-  <div
-    v-show="fullWidthImage"
-    :class="{ full: fullWidthImage }"
-    @click="fullWidthImage = !fullWidthImage"
-  >
+  <button class="thumbnail-btn" @click="fullWidthImage = true">
+    <PrismicImage :field="thumbnailField" width="200" height="300" loading="lazy" />
+  </button>
+  <dialog :open="fullWidthImage" class="full" @click.self="fullWidthImage = false">
+    <button class="close-btn" aria-label="Close image" @click="fullWidthImage = false">
+      &#x2715;
+    </button>
     <PrismicImage :field="props.image" loading="lazy" />
-  </div>
+  </dialog>
 </template>
 
 <style lang="scss" scoped>
-  img {
-    --border-radius: 5px;
-    border-radius: 0.2rem;
+  .thumbnail-btn {
+    background: none;
+    border: none;
     cursor: pointer;
-    height: auto;
-    margin: 1rem 2rem 1rem 0;
-    width: 200px;
-    box-shadow: var(--border-radius) var(--border-radius) 0 0 rgba(186, 186, 186, 0.2);
-  }
+    padding: 0;
 
-  .hidden {
-    display: none;
+    img {
+      --border-radius: 5px;
+      border-radius: 0.2rem;
+      height: auto;
+      margin: 1rem 2rem 1rem 0;
+      width: 200px;
+      box-shadow: var(--border-radius) var(--border-radius) 0 0 rgba(186, 186, 186, 0.2);
+    }
   }
 
   .full {
     background: rgba(3, 3, 3, 0.25);
-    cursor: pointer;
+    border: none;
     display: grid;
     place-content: center;
     position: fixed;
@@ -52,6 +49,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    max-width: 100vw;
 
     img {
       width: auto;
@@ -59,5 +57,16 @@
       max-height: 90vh;
       max-width: 90vw;
     }
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
 </style>
