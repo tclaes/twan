@@ -1,14 +1,10 @@
 <template>
   <div id="dinosaur">
-    <img src="../../public/img/patchi.svg" alt="Patchi" width="300px" height="150px" />
+    <img src="/img/patchi.svg" alt="Patchi" width="300" height="150" />
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'Dinosaur',
-  }
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
   #dinosaur {

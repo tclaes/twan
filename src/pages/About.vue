@@ -9,13 +9,7 @@
   </section>
 </template>
 
-<script>
-  export default {
-    setup() {
-      return {}
-    },
-  }
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
   .about {

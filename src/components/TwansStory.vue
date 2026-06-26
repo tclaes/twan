@@ -1,23 +1,16 @@
 <template>
-  <section id="twan-storie">
+  <section id="twan-story">
     <h1 class="uppercase">Twan's verhaal in het kort</h1>
     <Posts />
   </section>
 </template>
 
-<script>
-  import Posts from './Posts'
-
-  export default {
-    name: 'TwansStorie',
-    components: {
-      Posts,
-    },
-  }
+<script setup lang="ts">
+  import Posts from './Posts.vue'
 </script>
 
 <style scoped>
-  #twan-storie {
+  #twan-story {
     display: flex;
     flex-direction: column;
     min-height: 100vh;

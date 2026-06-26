@@ -1,11 +1,23 @@
 import { mount } from '@vue/test-utils'
+import { createPinia, setActivePinia } from 'pinia'
 import Sort from '@/elements/Sort-posts.vue'
+import { usePostsStore } from '@/store/posts'
+
+vi.mock('@/services/queries', () => ({
+  getPosts: vi.fn().mockResolvedValue({
+    posts: [],
+    pageInfo: { hasNextPage: false, hasPreviousPage: false },
+  }),
+}))
 
 describe('Sort posting', () => {
   let wrapper: any
+  let pinia: ReturnType<typeof createPinia>
 
   beforeEach(() => {
-    wrapper = mount(Sort)
+    pinia = createPinia()
+    setActivePinia(pinia)
+    wrapper = mount(Sort, { global: { plugins: [pinia] } })
   })
 
   it('should contain components', async () => {
@@ -13,10 +25,17 @@ describe('Sort posting', () => {
     expect(wrapper.attributes().id).toBe('sorting')
   })
 
-  it('should change order', async () => {
-    wrapper.vm.onChange = jest.fn()
-    console.log(wrapper.findAll('option'))
+  it('should call setSorting when select changes', async () => {
+    const store = usePostsStore()
+    const spy = vi.spyOn(store, 'setSorting').mockResolvedValue()
+    await wrapper.find('select#posts').setValue('ASC')
+    expect(spy).toHaveBeenCalledWith('ASC')
+  })
+
+  it('should call setSorting when select changes', async () => {
+    const store = usePostsStore()
+    const spy = vi.spyOn(store, 'setSorting').mockResolvedValue()
     await wrapper.find('select#posts').trigger('change')
-    expect(wrapper.vm.onChange.mock.calls.length).toBe(1)
+    expect(spy).toHaveBeenCalledTimes(1)
   })
 })

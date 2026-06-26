@@ -1,60 +1,29 @@
-import { PrismicLink } from 'apollo-link-prismic'
-import { InMemoryCache } from 'apollo-cache-inmemory'
-import ApolloClient from 'apollo-client'
-import gql from 'graphql-tag'
+import * as prismic from '@prismicio/client'
 
-const client = new ApolloClient({
-  link: PrismicLink({
-    uri: 'https://twanclaes.prismic.io/graphql',
-  }),
-  cache: new InMemoryCache(),
-})
+const client = prismic.createClient('twanclaes')
 
-export async function getPosts(sorting = 'DESC', cursor = '', amount = 20) {
-  return await client
-    .query({
-      query: gql`
-        query {
-          allPosts(
-            sortBy: meta_firstPublicationDate_${sorting}
-            after: "${cursor}"
-            first: ${amount}
-          ) {
-            totalCount
-            pageInfo {
-              hasNextPage
-              hasPreviousPage
-              startCursor
-              endCursor
-            }
-            edges {
-              node {
-                creation_date
-                title
-                image
-                content
-                body {
-                  ... on PostBodyImage_gallery {
-                    type,
-                    fields {
-                      gallery_image
-                    }
-                  }
-                __typename
-                }
-              }
-            }
-          }
-        }
-      `,
+export async function getPosts(sorting = 'DESC', page = 1, pageSize = 20) {
+  try {
+    const response = await client.get({
+      filters: [prismic.filter.at('document.type', 'post')],
+      orderings: [
+        {
+          field: 'my.post.creation_date',
+          direction: sorting === 'DESC' ? 'desc' : 'asc',
+        },
+      ],
+      pageSize,
+      page,
     })
-    .then((response) => {
-      return {
-        pageInfo: response.data.allPosts.pageInfo,
-        posts: response.data.allPosts.edges,
-      }
-    })
-    .catch((error) => {
-      return console.error(error)
-    })
+    return {
+      pageInfo: {
+        hasNextPage: response.next_page !== null,
+        hasPreviousPage: response.prev_page !== null,
+      },
+      posts: response.results.map((doc) => doc.data),
+    }
+  } catch (error) {
+    console.error(error)
+    throw error
+  }
 }

@@ -1,25 +1,18 @@
 <template>
   <section class="gallery">
-    <div v-for="img in imgGallery" :key="img.url">
-      <Img :image="img.gallery_image" />
+    <div v-for="(item, i) in imgGallery" :key="i">
+      <ImgModal :image="item.gallery_image" />
     </div>
   </section>
 </template>
 
-<script>
-  import Img from './../elements/Img-modal'
+<script setup lang="ts">
+  import ImgModal from './../elements/Img-modal.vue'
+  import type { ImageField } from '@prismicio/client'
 
-  export default {
-    components: {
-      Img,
-    },
-    props: {
-      imgGallery: Array,
-    },
-    data() {
-      return {}
-    },
-  }
+  defineProps<{
+    imgGallery: Array<{ gallery_image: ImageField }> | null
+  }>()
 </script>
 
 <style scoped lang="scss">

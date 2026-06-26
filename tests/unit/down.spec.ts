@@ -6,27 +6,27 @@ describe('Down arrow component Test', () => {
 
   beforeEach(() => {
     wrapper = mount(Down, {
-      props: {
-        color: '#fff',
-      },
+      props: { color: '#fff' },
     })
   })
 
-  it('should contain components', async () => {
+  it('should render the chevron', async () => {
     expect(wrapper.exists()).toBe(true)
     expect(wrapper.attributes().id).toBe('chevron-down')
-
-    const img = wrapper.find('svg')
-    expect(img.exists()).toBe(true)
+    expect(wrapper.find('svg').exists()).toBe(true)
   })
 
   it('should contain prop color', async () => {
     expect(wrapper.props('color')).toBe('#fff')
   })
 
-  it('should call scrolldown when clicked', async () => {
-    wrapper.vm.scrollDown = jest.fn()
+  it('should call window.scroll when clicked', async () => {
+    const scrollSpy = vi.spyOn(window, 'scroll').mockImplementation(() => {})
     await wrapper.find('#chevron-down').trigger('click')
-    expect(wrapper.vm.scrollDown.mock.calls.length).toBe(1)
+    expect(scrollSpy).toHaveBeenCalledWith({ top: window.innerHeight, behavior: 'smooth' })
+  })
+
+  afterEach(() => {
+    vi.resetAllMocks()
   })
 })

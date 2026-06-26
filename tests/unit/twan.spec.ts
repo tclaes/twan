@@ -1,9 +1,8 @@
 import { mount } from '@vue/test-utils'
 import Twan from '@/elements/Twan.vue'
 
-describe('Splash Test', () => {
+describe('Twan component Test', () => {
   it('should contain components', async () => {
-    // render the component
     const wrapper = mount(Twan)
 
     expect(wrapper.exists()).toBe(true)
