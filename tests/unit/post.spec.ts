@@ -6,6 +6,7 @@ describe('Post.vue Test', () => {
     const wrapper = mount(Post, {
       props: {
         post: {
+          uid: '1',
           creation_date: '2020-11-04',
           title: [
             {

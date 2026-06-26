@@ -1,6 +1,6 @@
 <template>
   <div id="sorting">
-    <select name="posts" id="posts" @change="onChange($event)">
+    <select name="posts" id="posts" :value="postsStore.sorting" @change="onChange($event)">
       <option value="ASC">Oudste bericht eerst</option>
       <option value="DESC" selected>Nieuwste bericht eerst</option>
     </select>
