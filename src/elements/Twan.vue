@@ -5,11 +5,7 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'Twan',
-  }
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
   h1 {

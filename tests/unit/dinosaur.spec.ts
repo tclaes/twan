@@ -3,7 +3,6 @@ import Dinosaur from '@/elements/Dinosaur.vue'
 
 describe('Dinosaur component Test', () => {
   it('should contain components', async () => {
-    // render the component
     const wrapper = mount(Dinosaur)
 
     expect(wrapper.exists()).toBe(true)

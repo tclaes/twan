@@ -5,15 +5,8 @@
   </section>
 </template>
 
-<script>
-  import Posts from './Posts'
-
-  export default {
-    name: 'TwansStorie',
-    components: {
-      Posts,
-    },
-  }
+<script setup lang="ts">
+  import Posts from './Posts.vue'
 </script>
 
 <style scoped>

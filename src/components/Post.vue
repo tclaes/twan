@@ -1,11 +1,11 @@
 <template>
   <section class="post-header">
-    <h2>{{ post.title[0].text }}</h2>
+    <h2>{{ asText(post.title) }}</h2>
     <div class="date">{{ post.creation_date }}</div>
   </section>
   <div class="columns">
     <div v-if="post.image" class="image">
-      <Img :image="img" />
+      <ImgModal :image="post.image" />
     </div>
     <div class="content" v-html="content"></div>
   </div>
@@ -14,32 +14,18 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+  import { computed } from 'vue'
+  import { asHTML, asText } from '@prismicio/client'
   import linkResolver from './../prismic/link-resolver'
-  import PrismicDOM from 'prismic-dom'
-  import Img from './../elements/Img-modal'
-  import ImageGallery from '@/components/ImageGallery'
+  import ImgModal from './../elements/Img-modal.vue'
+  import ImageGallery from '@/components/ImageGallery.vue'
+  import type { PostData } from '@/store/posts'
 
-  export default {
-    components: {
-      ImageGallery,
-      Img,
-    },
-    props: {
-      post: Object,
-    },
-    computed: {
-      content() {
-        return PrismicDOM.RichText.asHtml(this.post.content, linkResolver)
-      },
-      img() {
-        return this.post.image
-      },
-      imgGallery() {
-        return this.post.body ? this.post.body[0].fields : null
-      },
-    },
-  }
+  const props = defineProps<{ post: PostData }>()
+
+  const content = computed(() => asHTML(props.post.content, linkResolver))
+  const imgGallery = computed(() => props.post.body?.[0]?.fields ?? null)
 </script>
 
 <style lang="scss" scoped>

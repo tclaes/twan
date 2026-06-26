@@ -3,9 +3,8 @@ import Post from '@/components/Post.vue'
 
 describe('Post.vue Test', () => {
   it('should contain date', () => {
-    // render the component
     const wrapper = mount(Post, {
-      propsData: {
+      props: {
         post: {
           creation_date: '2020-11-04',
           title: [
@@ -32,7 +31,7 @@ describe('Post.vue Test', () => {
               copyright: null,
               url: 'https://images.prismic.io/twanclaes/3690f057-9717-4262-92a0-07714e2aa63b_README.jpg?auto=compress,format&rect=0,0,3024,4022&w=200&h=266',
             },
-          },
+          } as any,
           content: [
             {
               type: 'paragraph',
@@ -55,7 +54,7 @@ describe('Post.vue Test', () => {
     })
 
     expect(wrapper.exists()).toBe(true)
-    expect(wrapper.find('div').classes()).toContain('date')
-    expect(wrapper.findAll('div')[1].classes()).toContain('columns')
+    expect(wrapper.find('div.date').exists()).toBe(true)
+    expect(wrapper.find('div.columns').exists()).toBe(true)
   })
 })

@@ -1,6 +1,6 @@
 interface DocType {
   type: string
-  uid: string
+  uid?: string
 }
 
 export default function (doc: DocType) {

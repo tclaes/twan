@@ -1,28 +1,13 @@
 <template>
   <div class="pagination">
-    <a @click="MoreResults" v-if="hasNextPage">Meer berichten</a>
+    <a @click="postsStore.loadMore()" v-if="postsStore.hasNextPage">Meer berichten</a>
   </div>
 </template>
 
-<script>
-  import { getPosts } from '@/services/queries'
+<script setup lang="ts">
+  import { usePostsStore } from '@/store/posts'
 
-  export default {
-    computed: {
-      hasNextPage() {
-        return this.$store.state.pageInfo ? this.$store.state.pageInfo.hasNextPage : false
-      },
-    },
-    methods: {
-      MoreResults() {
-        getPosts(this.$store.state.sorting, this.$store.state.pageInfo.endCursor).then(
-          (response) => {
-            this.$store.commit('addPosts', response)
-          }
-        )
-      },
-    },
-  }
+  const postsStore = usePostsStore()
 </script>
 
 <style scoped>

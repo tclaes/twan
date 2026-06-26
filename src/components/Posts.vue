@@ -1,42 +1,19 @@
 <template>
   <Sorting class="sorting"></Sorting>
-  <article v-for="post in posts" :key="post.id" class="post">
-    <Post :post="post.node" />
+  <article v-for="post in postsStore.posts" :key="post.creation_date" class="post">
+    <Post :post="post" />
   </article>
   <Pagination />
 </template>
 
-<script>
-  import { getPosts } from '@/services/queries'
+<script setup lang="ts">
+  import { usePostsStore } from '@/store/posts'
   import Post from './Post.vue'
-  import Sorting from './../elements/Sort-posts'
-  import Pagination from './../elements/Pagination'
+  import Sorting from './../elements/Sort-posts.vue'
+  import Pagination from './../elements/Pagination.vue'
 
-  export default {
-    components: {
-      Post,
-      Sorting,
-      Pagination,
-    },
-    data() {
-      return {}
-    },
-    computed: {
-      posts() {
-        return this.$store.state.posts
-      },
-    },
-    created() {
-      this.getContent()
-    },
-    methods: {
-      getContent() {
-        getPosts().then((response) => {
-          this.$store.commit('setPosts', response)
-        })
-      },
-    },
-  }
+  const postsStore = usePostsStore()
+  postsStore.fetchPosts()
 </script>
 
 <style scoped lang="scss">

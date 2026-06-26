@@ -18,21 +18,11 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'Down',
-    props: {
-      color: String,
-    },
-    methods: {
-      scrollDown() {
-        let height = window.innerHeight
-        window.scroll({
-          top: height,
-          behavior: 'smooth',
-        })
-      },
-    },
+<script setup lang="ts">
+  defineProps<{ color: string }>()
+
+  function scrollDown() {
+    window.scroll({ top: window.innerHeight, behavior: 'smooth' })
   }
 </script>
 

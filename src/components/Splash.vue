@@ -6,28 +6,22 @@
   </section>
 </template>
 
-<script>
+<script setup lang="ts">
+  import { onMounted, onUnmounted } from 'vue'
   import Dinosaur from './../elements/Dinosaur.vue'
   import Twan from './../elements/Twan.vue'
   import Down from './../elements/Down.vue'
 
-  export default {
-    name: 'Splash',
-    components: {
-      Dinosaur,
-      Twan,
-      Down,
-    },
-    mounted: function () {
-      let vh = window.innerHeight * 0.01
-      document.documentElement.style.setProperty('--vh', `${vh}px`)
-
-      window.addEventListener('resize', () => {
-        let vh = window.innerHeight * 0.01
-        document.documentElement.style.setProperty('--vh', `${vh}px`)
-      })
-    },
+  function setVh() {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
   }
+
+  onMounted(() => {
+    setVh()
+    window.addEventListener('resize', setVh)
+  })
+
+  onUnmounted(() => window.removeEventListener('resize', setVh))
 </script>
 
 <style scoped lang="scss">

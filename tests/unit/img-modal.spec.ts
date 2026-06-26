@@ -1,14 +1,15 @@
 import { mount } from '@vue/test-utils'
+import type { ImageField } from '@prismicio/client'
 import ImgModal from '@/elements/Img-modal.vue'
+
+const emptyImage = {} as ImageField<'thumbnail'>
 
 describe('Img modal component Test', () => {
   let wrapper: any
 
   beforeEach(() => {
     wrapper = mount(ImgModal, {
-      propsData: {
-        image: {},
-      },
+      props: { image: emptyImage },
     })
   })
 

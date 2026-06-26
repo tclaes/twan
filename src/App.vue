@@ -1,36 +1,22 @@
 <template>
-  <Navigation v-show="currentRouteName" />
+  <Navigation v-show="showNavigation" />
   <router-view />
 </template>
 
-<script>
-  import Navigation from '@/components/Navigation'
+<script setup lang="ts">
+  import { ref, computed, onMounted, onUnmounted } from 'vue'
+  import { useRoute } from 'vue-router'
+  import Navigation from '@/components/Navigation.vue'
 
-  export default {
-    components: { Navigation },
-    data() {
-      return {
-        isVisible: false,
-      }
-    },
-    computed: {
-      currentRouteName() {
-        if (this.$route.name !== 'Home') {
-          return true
-        }
-        return this.isVisible
-      },
-    },
-    created() {
-      window.addEventListener('scroll', this.handleScroll)
-    },
-    unmounted() {
-      window.removeEventListener('scroll', this.handleScroll)
-    },
-    methods: {
-      handleScroll() {
-        this.isVisible = window.scrollY > window.innerHeight
-      },
-    },
+  const route = useRoute()
+  const isVisible = ref(false)
+
+  const showNavigation = computed(() => route.name !== 'Home' || isVisible.value)
+
+  function handleScroll() {
+    isVisible.value = window.scrollY > window.innerHeight
   }
+
+  onMounted(() => window.addEventListener('scroll', handleScroll))
+  onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 </script>

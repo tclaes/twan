@@ -5,23 +5,15 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
   import Splash from './../components/Splash.vue'
-  import TwansStorie from './../components/TwansStorie'
-
-  export default {
-    name: 'Home',
-    components: {
-      Splash,
-      TwansStorie,
-    },
-  }
+  import TwansStorie from './../components/TwansStorie.vue'
 </script>
 
 <style>
   @font-face {
     font-family: 'Little Dinosaur';
-    src: url('../../public/fonts/LittleDinosaur.otf');
+    src: url('/fonts/LittleDinosaur.otf');
     font-weight: 400;
     font-style: normal;
     font-display: block;
@@ -29,7 +21,7 @@
 
   @font-face {
     font-family: 'Little Dinosaur';
-    src: url('../../public/fonts/LittleDinosaur-Bold.otf');
+    src: url('/fonts/LittleDinosaur-Bold.otf');
     font-display: block;
     font-weight: 700;
     font-style: normal;

@@ -1,7 +1,7 @@
 <template>
   <img
-    :src="img_thumbnail.url"
-    :alt="img_thumbnail.alt"
+    :src="imgThumbnail.url ?? undefined"
+    :alt="imgThumbnail.alt ?? undefined"
     width="200"
     height="300"
     @click="fullWidthImage = !fullWidthImage"
@@ -12,29 +12,18 @@
     :class="{ full: fullWidthImage }"
     @click="fullWidthImage = !fullWidthImage"
   >
-    <img loading="lazy" :src="img.url" :alt="img.alt" />
+    <img loading="lazy" :src="image.url ?? undefined" :alt="image.alt ?? undefined" />
   </div>
 </template>
 
-<script>
-  export default {
-    data: function () {
-      return {
-        fullWidthImage: false,
-      }
-    },
-    props: {
-      image: Object,
-    },
-    computed: {
-      img() {
-        return this.image
-      },
-      img_thumbnail() {
-        return this.image.thumbnail ? this.image.thumbnail : this.image
-      },
-    },
-  }
+<script setup lang="ts">
+  import { ref, computed } from 'vue'
+  import type { ImageField } from '@prismicio/client'
+
+  const props = defineProps<{ image: ImageField<'thumbnail'> }>()
+
+  const fullWidthImage = ref(false)
+  const imgThumbnail = computed(() => props.image?.thumbnail ?? props.image)
 </script>
 
 <style lang="scss" scoped>

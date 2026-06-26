@@ -7,18 +7,13 @@
   </div>
 </template>
 
-<script>
-  import { getPosts } from '@/services/queries'
+<script setup lang="ts">
+  import { usePostsStore } from '@/store/posts'
 
-  export default {
-    methods: {
-      onChange(e) {
-        getPosts(e.target.value).then((response) => {
-          this.$store.commit('setPosts', response)
-          this.$store.commit('setSorting', e.target.value)
-        })
-      },
-    },
+  const postsStore = usePostsStore()
+
+  function onChange(e: Event) {
+    postsStore.setSorting((e.target as HTMLSelectElement).value)
   }
 </script>
 
