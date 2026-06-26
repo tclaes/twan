@@ -24,6 +24,6 @@ export async function getPosts(sorting = 'DESC', page = 1, pageSize = 20) {
     }
   } catch (error) {
     console.error(error)
-    return null
+    throw error
   }
 }
