@@ -24,6 +24,9 @@ describe('Down arrow component Test', () => {
     const scrollSpy = vi.spyOn(window, 'scroll').mockImplementation(() => {})
     await wrapper.find('#chevron-down').trigger('click')
     expect(scrollSpy).toHaveBeenCalledWith({ top: window.innerHeight, behavior: 'smooth' })
-    scrollSpy.mockRestore()
+  })
+
+  afterEach(() => {
+    vi.resetAllMocks()
   })
 })
