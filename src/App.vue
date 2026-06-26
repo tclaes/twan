@@ -17,6 +17,9 @@
     isVisible.value = window.scrollY > window.innerHeight
   }
 
-  onMounted(() => window.addEventListener('scroll', handleScroll))
+  onMounted(() => {
+    handleScroll()
+    window.addEventListener('scroll', handleScroll)
+  })
   onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 </script>
