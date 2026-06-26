@@ -17,6 +17,7 @@ export const usePostsStore = defineStore('posts', {
     hasNextPage: false,
     sorting: 'DESC',
     page: 1,
+    loading: false,
   }),
   actions: {
     async fetchPosts() {
@@ -26,11 +27,17 @@ export const usePostsStore = defineStore('posts', {
       this.page = 1
     },
     async loadMore() {
-      const nextPage = this.page + 1
-      const result = await getPosts(this.sorting, nextPage)
-      this.posts = [...this.posts, ...result.posts] as PostData[]
-      this.hasNextPage = result.pageInfo.hasNextPage
-      this.page = nextPage
+      if (this.loading) return
+      this.loading = true
+      try {
+        const nextPage = this.page + 1
+        const result = await getPosts(this.sorting, nextPage)
+        this.posts = [...this.posts, ...result.posts] as PostData[]
+        this.hasNextPage = result.pageInfo.hasNextPage
+        this.page = nextPage
+      } finally {
+        this.loading = false
+      }
     },
     async setSorting(sorting: string) {
       this.sorting = sorting
