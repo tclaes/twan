@@ -1,6 +1,6 @@
 <template>
   <div class="pagination">
-    <a @click="postsStore.loadMore()" v-if="postsStore.hasNextPage">Meer berichten</a>
+    <button @click="postsStore.loadMore()" v-if="postsStore.hasNextPage">Meer berichten</button>
   </div>
 </template>
 
@@ -17,7 +17,8 @@
     margin-bottom: 2rem;
   }
 
-  a {
+  button {
+    all: unset;
     border: 1px solid #333;
     cursor: pointer;
     padding: 0.5rem 1.2rem;
