@@ -3,6 +3,7 @@ import type { RichTextField, ImageField } from '@prismicio/client'
 import { getPosts } from '@/services/queries'
 
 export interface PostData {
+  uid: string
   creation_date: string
   title: RichTextField
   image: ImageField<'thumbnail'> | null

@@ -1,6 +1,6 @@
 <template>
   <Sorting class="sorting"></Sorting>
-  <article v-for="post in postsStore.posts" :key="post.creation_date" class="post">
+  <article v-for="post in postsStore.posts" :key="post.uid" class="post">
     <Post :post="post" />
   </article>
   <Pagination />
