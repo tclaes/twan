@@ -28,6 +28,13 @@ describe('Sort posting', () => {
   it('should call setSorting when select changes', async () => {
     const store = usePostsStore()
     const spy = vi.spyOn(store, 'setSorting').mockResolvedValue()
+    await wrapper.find('select#posts').setValue('ASC')
+    expect(spy).toHaveBeenCalledWith('ASC')
+  })
+
+  it('should call setSorting when select changes', async () => {
+    const store = usePostsStore()
+    const spy = vi.spyOn(store, 'setSorting').mockResolvedValue()
     await wrapper.find('select#posts').trigger('change')
     expect(spy).toHaveBeenCalledTimes(1)
   })
