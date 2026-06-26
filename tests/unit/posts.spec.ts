@@ -1,10 +1,17 @@
-import { mount } from '@vue/test-utils'
+import { mount, flushPromises } from '@vue/test-utils'
 import { createPinia, setActivePinia } from 'pinia'
-import { usePostsStore } from '@/store/posts'
 import Posts from '@/components/Posts.vue'
 
+const testPost = vi.hoisted(() => ({
+  uid: 'dag-0',
+  creation_date: '2020-11-04',
+  title: [{ type: 'heading1', text: 'Dag 0', spans: [] }],
+  image: null,
+  content: [],
+}))
+
 vi.mock('@/services/queries', () => ({
-  getPosts: vi.fn().mockResolvedValue({ pageInfo: { hasNextPage: false }, posts: [] }),
+  getPosts: vi.fn().mockResolvedValue({ pageInfo: { hasNextPage: false }, posts: [testPost] }),
 }))
 
 describe('Posts.vue Test', () => {
@@ -13,22 +20,9 @@ describe('Posts.vue Test', () => {
   beforeEach(() => {
     pinia = createPinia()
     setActivePinia(pinia)
-
-    const store = usePostsStore()
-    store.$patch({
-      posts: [
-        {
-          creation_date: '2020-11-04',
-          title: [{ type: 'heading1', text: 'Dag 0', spans: [] }],
-          image: null,
-          content: [],
-        },
-      ],
-      hasNextPage: true,
-    })
   })
 
-  it('should render posts', () => {
+  it('should render posts', async () => {
     const wrapper = mount(Posts, {
       global: {
         plugins: [pinia],
@@ -36,6 +30,8 @@ describe('Posts.vue Test', () => {
       },
     })
 
-    expect(wrapper.exists()).toBe(true)
+    await flushPromises()
+
+    expect(wrapper.findAll('article.post')).toHaveLength(1)
   })
 })
