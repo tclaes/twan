@@ -1,13 +1,13 @@
 <template>
   <div id="home">
     <Splash />
-    <TwansStorie />
+    <TwansStory />
   </div>
 </template>
 
 <script setup lang="ts">
   import Splash from './../components/Splash.vue'
-  import TwansStorie from './../components/TwansStorie.vue'
+  import TwansStory from '../components/TwansStory.vue'
 </script>
 
 <style>

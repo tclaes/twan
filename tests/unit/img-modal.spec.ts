@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import type { ImageField } from '@prismicio/client'
 import ImgModal from '@/elements/Img-modal.vue'
 
-const emptyImage = {} as ImageField<'thumbnail'>
+const emptyImage = {} as ImageField
 
 describe('Img modal component Test', () => {
   let wrapper: any

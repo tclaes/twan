@@ -6,9 +6,9 @@ export interface PostData {
   uid: string
   creation_date: string
   title: RichTextField
-  image: ImageField<'thumbnail'> | null
+  image: ImageField | null
   content: RichTextField
-  body?: Array<{ fields?: Array<{ gallery_image: ImageField<'thumbnail'> }> }>
+  body?: Array<{ fields?: Array<{ gallery_image: ImageField }> }>
 }
 
 export const usePostsStore = defineStore('posts', {

@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import { createPinia, setActivePinia } from 'pinia'
 import Home from '@/pages/Home.vue'
 import Splash from '@/components/Splash.vue'
-import TwansStorie from '@/components/TwansStorie.vue'
+import TwansStory from '@/components/TwansStory.vue'
 
 describe('Home.vue Test', () => {
   let pinia: ReturnType<typeof createPinia>
@@ -21,6 +21,6 @@ describe('Home.vue Test', () => {
     })
 
     expect(wrapper.getComponent(Splash))
-    expect(wrapper.getComponent(TwansStorie))
+    expect(wrapper.getComponent(TwansStory))
   })
 })

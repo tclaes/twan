@@ -11,7 +11,7 @@
   import type { ImageField } from '@prismicio/client'
 
   defineProps<{
-    imgGallery: Array<{ gallery_image: ImageField<'thumbnail'> }> | null
+    imgGallery: Array<{ gallery_image: ImageField }> | null
   }>()
 </script>
 

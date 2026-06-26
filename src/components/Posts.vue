@@ -1,5 +1,5 @@
 <template>
-  <Sorting class="sorting"></Sorting>
+  <Sorting class="sorting" />
   <article v-for="post in postsStore.posts" :key="post.uid" class="post">
     <Post :post="post" />
   </article>

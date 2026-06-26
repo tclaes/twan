@@ -1,30 +1,31 @@
+<script setup lang="ts">
+  import { ref } from 'vue'
+  import { PrismicImage } from '@prismicio/vue'
+  import type { ImageField } from '@prismicio/client'
+
+  const props = defineProps<{ image: ImageField }>()
+
+  const thumbnailField = (props.image as ImageField<'thumbnail'>).thumbnail ?? props.image
+
+  const fullWidthImage = ref(false)
+</script>
+
 <template>
-  <img
-    :src="imgThumbnail.url ?? undefined"
-    :alt="imgThumbnail.alt ?? undefined"
+  <PrismicImage
+    :field="thumbnailField"
     width="200"
     height="300"
-    @click="fullWidthImage = !fullWidthImage"
     loading="lazy"
+    @click="fullWidthImage = !fullWidthImage"
   />
   <div
     v-show="fullWidthImage"
     :class="{ full: fullWidthImage }"
     @click="fullWidthImage = !fullWidthImage"
   >
-    <img loading="lazy" :src="image.url ?? undefined" :alt="image.alt ?? undefined" />
+    <PrismicImage :field="props.image" loading="lazy" />
   </div>
 </template>
-
-<script setup lang="ts">
-  import { ref, computed } from 'vue'
-  import type { ImageField } from '@prismicio/client'
-
-  const props = defineProps<{ image: ImageField<'thumbnail'> }>()
-
-  const fullWidthImage = ref(false)
-  const imgThumbnail = computed(() => props.image?.thumbnail ?? props.image)
-</script>
 
 <style lang="scss" scoped>
   img {

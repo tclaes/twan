@@ -1,5 +1,5 @@
 <template>
-  <section id="twan-storie">
+  <section id="twan-story">
     <h1 class="uppercase">Twan's verhaal in het kort</h1>
     <Posts />
   </section>
@@ -10,7 +10,7 @@
 </script>
 
 <style scoped>
-  #twan-storie {
+  #twan-story {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
